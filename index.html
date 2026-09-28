@@ -35,10 +35,13 @@ p{margin:0}
 a{color:var(--accent)}
 img{max-width:100%}
 
-nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px 0;gap:12px}
+nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px 0;gap:12px;flex-wrap:wrap}
 .brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
 .brand .mark{width:11px;height:11px;border-radius:2px;background:var(--accent);flex:none}
 .brand small{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;font-weight:400}
+.navlinks{display:flex;gap:16px;font-size:14px}
+.navlinks a{color:var(--muted);text-decoration:none}
+.navlinks a:hover{color:var(--ink)}
 
 .hero{display:flex;flex-direction:column;gap:22px;padding-block:8px 0}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.9px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px}
@@ -102,6 +105,7 @@ footer b{color:var(--ink)}
 
   <nav>
     <div class="brand"><span class="mark"></span>Trucker Pay Protector<small>beta waitlist</small></div>
+    <div class="navlinks"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete-account/">Delete account</a></div>
   </nav>
 
   <section class="hero">
@@ -187,6 +191,7 @@ footer b{color:var(--ink)}
   <footer>
     <p><b>Trucker Pay Protector</b> checks your pay against your own documents. It isn't legal, tax, or payroll advice, and your employer's or broker's records remain the official ones.</p>
     <p>No ads. Nothing about your pay is sold. This page collects only what's shown above, to gauge interest before the app is built.</p>
+    <p><a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/delete-account/">Delete your account</a></p>
   </footer>
 
 </div>
