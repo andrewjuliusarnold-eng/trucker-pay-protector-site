@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Trucker Pay Protector — Waitlist</title>
+<meta name="description" content="An app that checks your paycheck against your own pay documents. Join the waitlist for the beta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F4F5F3; --surface:#FFFFFF; --ink:#12161A; --muted:#5B6570; --line:#DADFDC;
+  --accent:#B85B0A; --accent-ink:#FFFFFF; --accent-fill:#FBE9D8;
+  --good:#1D6A4C; --good-fill:#E1F0E8; --bad:#A3321F; --bad-fill:#FBE6E1;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --bg:#0E1013; --surface:#171A1E; --ink:#EDEFEC; --muted:#98A0A8; --line:#2B2F34;
+    --accent:#E8862E; --accent-ink:#0E1013; --accent-fill:#2E2013;
+    --good:#3FA97C; --good-fill:#123626; --bad:#E8836F; --bad-fill:#3A1D17;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+p{margin:0}
+a{color:var(--accent)}
+img{max-width:100%}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px 0;gap:12px}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
+.brand .mark{width:11px;height:11px;border-radius:2px;background:var(--accent);flex:none}
+.brand small{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;font-weight:400}
+
+.hero{display:flex;flex-direction:column;gap:22px;padding-block:8px 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.9px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent)}
+h1{font-size:clamp(36px,7.5vw,58px);font-weight:800}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:19px;color:var(--muted);max-width:56ch;line-height:1.5}
+
+.signup{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 0 var(--line)}
+.signup h2{font-size:21px;text-transform:none;letter-spacing:0}
+.row{display:flex;flex-direction:column;gap:6px}
+label{font-family:var(--mono);font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted)}
+input,select{font:inherit;font-size:16px;padding:11px 12px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.grid2{grid-template-columns:1fr}}
+button{font-family:var(--body);font-weight:700;font-size:16px;padding:13px 18px;border-radius:6px;border:none;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+button:hover{filter:brightness(1.06)}
+button:disabled{opacity:.6;cursor:default}
+.fineprint{font-size:13px;color:var(--muted)}
+.confirm{display:none;flex-direction:column;gap:10px;text-align:left}
+.confirm.show{display:flex}
+.confirm .badge{align-self:flex-start;background:var(--good-fill);color:var(--good);font-family:var(--mono);font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.err{display:none;color:var(--bad);font-size:14px}
+.err.show{display:block}
+
+.proof{display:grid;grid-template-columns:1fr;gap:16px}
+.proof-copy{display:flex;flex-direction:column;gap:12px}
+.proof-copy h2{font-size:26px}
+.ledger{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.ledger .lhead{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:0;padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--line)}
+.ledger .lhead span{font-family:var(--mono);font-size:10.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.lrow{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:0;padding:11px 14px;border-bottom:1px solid var(--line);align-items:center;font-size:14.5px}
+.lrow:last-child{border-bottom:none}
+.lrow .code{font-family:var(--mono);font-size:11.5px;color:var(--muted);display:block}
+.lrow .num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.lrow.flag{background:var(--bad-fill)}
+.lrow.flag .num.paid{color:var(--bad);font-weight:700}
+.taglabel{font-family:var(--mono);font-size:10px;letter-spacing:.5px;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--bad);color:#fff;justify-self:start;margin-top:3px;display:inline-block}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.step .n{font-family:var(--display);font-size:28px;font-weight:800;color:var(--accent)}
+.step h3{font-size:17px}
+.step p{font-size:14.5px;color:var(--muted);line-height:1.45}
+
+.seg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.seg{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.seg h3{font-size:16px}
+.seg p{font-size:14px;color:var(--muted);line-height:1.4}
+
+section{display:flex;flex-direction:column;gap:20px}
+h2.section-h{font-size:13px;font-family:var(--mono);letter-spacing:.7px;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:24px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
+footer b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <div class="brand"><span class="mark"></span>Trucker Pay Protector<small>beta waitlist</small></div>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">Built by a driver, checked line by line</div>
+    <h1>Your paycheck follows <em>your</em> rules. Make sure it actually does.</h1>
+    <p class="lede">Upload your pay memo, lease, or rate confirmations once. Every paycheck after that gets checked against them automatically — detention, delay pay, mileage, deductions, all of it. For company drivers and owner-operators.</p>
+
+    <div class="signup" id="signup-card">
+      <h2>Get on the list</h2>
+      <form id="signup-form">
+        <div class="grid2">
+          <div class="row">
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="row">
+            <label for="drivertype">You're a</label>
+            <select id="drivertype" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="company">Company driver</option>
+              <option value="leased">Leased owner-operator</option>
+              <option value="authority">Own-authority owner-operator</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <label for="paytype">Mostly paid by</label>
+          <select id="paytype" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="mile">Per mile</option>
+            <option value="activity">Per stop / activity codes</option>
+            <option value="hourly">Hourly</option>
+            <option value="percent">Percentage of load</option>
+            <option value="settlement">Settlement statement</option>
+            <option value="other">Other / not sure</option>
+          </select>
+        </div>
+        <button type="submit" id="submit-btn">Continue to join the waitlist</button>
+        <p class="err" id="err"></p>
+      </form>
+      <div class="confirm" id="confirm">
+        <span class="badge">One more step</span>
+        <p>Opened in a new tab, already filled in — hit Submit there to finish joining. No spam, no account, nothing to pay. One email when the beta opens, and owner-operators and drivers on complex pay plans get first invites.</p>
+      </div>
+      <p class="fineprint">This is a demand check before the app gets built. Sign-ups go straight to a Google Form — just your email and pay type, so the beta can be built for real pay plans like yours.</p>
+    </div>
+  </section>
+
+  <section class="proof">
+    <span class="section-h">What it catches</span>
+    <div class="proof-copy">
+      <h2>An easy mistake to make. An easy one to miss.</h2>
+      <p class="lede" style="font-size:16px">A stop code, a rate, a rounding rule — one line among dozens on a paystub. Here's the kind of thing that gets past a driver checking by hand, and doesn't get past an app that read the pay memo itself.</p>
+    </div>
+    <div class="ledger">
+      <div class="lhead"><span>Pay item</span><span style="text-align:right">Expected</span><span style="text-align:right">Paid</span></div>
+      <div class="lrow"><div>Linehaul, 612 mi<span class="code">MI-01</span></div><div class="num">$342.72</div><div class="num">$342.72</div></div>
+      <div class="lrow flag"><div>Delay time, 2.5 hr @ $20/hr<span class="code">DL-02 · after 2 hr free</span><span class="taglabel">Short $10.00</span></div><div class="num">$50.00</div><div class="num paid">$40.00</div></div>
+      <div class="lrow"><div>Stop pay, 2nd stop<span class="code">PD-02</span></div><div class="num">$25.00</div><div class="num">$25.00</div></div>
+      <div class="lrow flag"><div>Detention, customer B<span class="code">DT-01 · not on paystub</span><span class="taglabel">Missing</span></div><div class="num">$60.00</div><div class="num paid">$0.00</div></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-h">How it works</span>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Upload your documents</h3><p>Your pay memo, lease, or rate confirmations, plus a couple of recent paystubs or settlements.</p></div>
+      <div class="step"><div class="n">2</div><h3>Confirm your pay plan</h3><p>The app drafts your exact rules from your own documents and asks you to confirm each one, card by card.</p></div>
+      <div class="step"><div class="n">3</div><h3>Log your day</h3><p>One tap per stop, delay, or event — the same way you'd note it for your own records.</p></div>
+      <div class="step"><div class="n">4</div><h3>Check every check</h3><p>Each paycheck or settlement gets matched line by line against what you logged and what your documents promise.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-h">Who this is for</span>
+    <div class="seg-grid">
+      <div class="seg"><h3>Company drivers</h3><p>Per-mile, hourly, or activity-code pay plans with a lot of small line items to keep straight.</p></div>
+      <div class="seg"><h3>Leased owner-operators</h3><p>Settlement deductions, escrow, and percentage-of-revenue math checked against your own lease.</p></div>
+      <div class="seg"><h3>Own-authority owner-operators</h3><p>Every rate confirmation checked against what actually lands in your account.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>Trucker Pay Protector</b> checks your pay against your own documents. It isn't legal, tax, or payroll advice, and your employer's or broker's records remain the official ones.</p>
+    <p>No ads. Nothing about your pay is sold. This page collects only what's shown above, to gauge interest before the app is built.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var FORM_BASE = 'https://docs.google.com/forms/d/e/1FAIpQLSeMlvWXSlxKr4IbmWMPDE1Io0vTKSWHm_GhvoIXgXoGh1bvpg/viewform';
+  var ENTRY_EMAIL = 'entry.406664466';
+  var ENTRY_DRIVERTYPE = 'entry.2094223645';
+  var ENTRY_PAYTYPE = 'entry.1455988263';
+  var DRIVERTYPE_LABELS = {
+    company: 'Company driver',
+    leased: 'Leased owner-operator',
+    authority: 'Own-authority owner-operator'
+  };
+  var PAYTYPE_LABELS = {
+    mile: 'Per mile',
+    activity: 'Per stop / activity codes',
+    hourly: 'Hourly',
+    percent: 'Percentage of load',
+    settlement: 'Settlement statement',
+    other: 'Other / not sure'
+  };
+
+  var form = document.getElementById('signup-form');
+  var confirmEl = document.getElementById('confirm');
+  var errEl = document.getElementById('err');
+
+  function alreadyOpened(){
+    try { return localStorage.getItem('tpp_waitlist_opened') === '1'; } catch(e){ return false; }
+  }
+  function markOpened(){
+    try { localStorage.setItem('tpp_waitlist_opened', '1'); } catch(e){}
+  }
+
+  if (alreadyOpened()) {
+    form.hidden = true;
+    confirmEl.classList.add('show');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errEl.classList.remove('show');
+    var email = document.getElementById('email').value.trim();
+    var drivertype = document.getElementById('drivertype').value;
+    var paytype = document.getElementById('paytype').value;
+    if (!email || !drivertype || !paytype) {
+      errEl.textContent = 'Fill in all three fields.';
+      errEl.classList.add('show');
+      return;
+    }
+    var url = FORM_BASE + '?usp=pp_url'
+      + '&' + ENTRY_EMAIL + '=' + encodeURIComponent(email)
+      + '&' + ENTRY_DRIVERTYPE + '=' + encodeURIComponent(DRIVERTYPE_LABELS[drivertype] || '')
+      + '&' + ENTRY_PAYTYPE + '=' + encodeURIComponent(PAYTYPE_LABELS[paytype] || '');
+    window.open(url, '_blank', 'noopener');
+    markOpened();
+    form.hidden = true;
+    confirmEl.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
