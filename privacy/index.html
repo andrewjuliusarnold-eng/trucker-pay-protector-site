@@ -103,6 +103,7 @@ footer a{color:var(--muted)}
         <li><strong>Account information:</strong> your email address and password. Passwords are handled by Google Firebase Authentication. We never see or store your password itself.</li>
         <li><strong>Work and pay information:</strong> the events you log (shifts, stops, loads, miles, hours, notes), your pay plan (pay rates and rules), your employer or carrier name if you enter it, and the pay the App calculates.</li>
         <li><strong>Documents you upload:</strong> photos or PDFs of pay stubs, settlement statements, rate confirmations, pay memos and similar documents. These can include personal details printed on them, such as your name, address, employee number, the last digits of bank or tax numbers, wages, deductions and year-to-date totals.</li>
+        <li><strong>Questions you ask in Gut Check:</strong> the questions you tap or type in the App's pay chat, and the answers it gives.</li>
         <li><strong>Messages to us:</strong> anything you send when you contact support.</li>
         <li><strong>Waitlist sign-ups:</strong> if you join the waitlist on our website, your email address, driver type (company or owner-operator) and how you are paid. The waitlist form is run by Google Forms.</li>
       </ul>
@@ -123,6 +124,7 @@ footer a{color:var(--muted)}
         <li>run the App's features: logging events, calculating pay under your pay plan, comparing expected and actual pay, and preparing summaries or messages you choose to share;</li>
         <li>fill in the location of events you log;</li>
         <li>read documents you upload with AI, to suggest pay-plan settings and read pay-stub lines for you to confirm;</li>
+        <li>answer questions you ask in Gut Check, and count them toward the monthly question limit;</li>
         <li>back up and restore your records;</li>
         <li>manage your account, subscription and free trial;</li>
         <li>respond to you when you contact us;</li>
@@ -134,8 +136,13 @@ footer a{color:var(--muted)}
     </section>
 
     <section>
-      <h2>4. AI document reading (Anthropic)</h2>
-      <p>When you ask the App to read a document, our server sends that document (or the relevant pages) to Anthropic, the company that makes the Claude AI models, through Anthropic's business API. Anthropic processes it only to return the reading to us, as our service provider. Under Anthropic's commercial terms, Anthropic does not use this data to train its models, and it keeps API data for no more than 30 days, except where the law requires longer or where Anthropic's automated safety systems flag content for review (in which case it may be kept up to 2 years). Only use AI reading for documents you are comfortable sending to our service provider.</p>
+      <h2>4. AI features (Anthropic)</h2>
+      <p>The App uses AI in two places:</p>
+      <ul>
+        <li><strong>Document reading.</strong> When you ask the App to read a document, our server sends that document (or the relevant pages).</li>
+        <li><strong>Gut Check (pay chat).</strong> When you ask a question, our server sends your question and a short written summary of your own pay plan and the pay period you're asking about. It does not send your documents or photos.</li>
+      </ul>
+      <p>In both cases the data goes to Anthropic, the company that makes the Claude AI models, through Anthropic's business API. Anthropic processes it only to return the result to us, as our service provider. Under Anthropic's commercial terms, Anthropic does not use this data to train its models, and it keeps API data for no more than 30 days, except where the law requires longer or where Anthropic's automated safety systems flag content for review (in which case it may be kept up to 2 years). Only use these features for information you are comfortable sending to our service provider.</p>
     </section>
 
     <section>
