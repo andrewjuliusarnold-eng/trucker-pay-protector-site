@@ -117,7 +117,6 @@ h2.section-h{font-size:13px;font-family:var(--mono);letter-spacing:.7px;text-tra
 .price-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
 .price-row .label{font-size:14px;color:var(--muted)}
 .price-row .amt{font-family:var(--mono);font-size:15px;text-align:right}
-.price-row .amt .was{color:var(--muted);text-decoration:line-through;font-size:13px;margin-right:6px}
 .price-row .amt .now{color:var(--accent);font-weight:700}
 .founding-badge{align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.4px;text-transform:uppercase;color:var(--accent);background:var(--accent-fill);padding:3px 8px;border-radius:999px}
 .price-card .trial{font-size:13px;color:var(--muted)}
@@ -157,7 +156,7 @@ footer b{color:var(--ink)}
   <section class="hero">
     <div class="eyebrow">Built by a driver, checked line by line</div>
     <h1>Your paycheck follows <em>your</em> rules. Make sure it actually does.</h1>
-    <p class="lede">Upload your pay memo, lease, or rate confirmations once. Every paycheck after that gets checked against them automatically — detention, delay pay, mileage, deductions, all of it. For company drivers and owner-operators, on Android and iPhone.</p>
+    <p class="lede">Upload your pay memo, lease, or rate confirmations once. Then every paystub or settlement you add gets checked against them, line by line: detention, delay pay, mileage, deductions, all of it. For company drivers and owner-operators, on Android and iPhone.</p>
 
     <div class="signup" id="signup-card">
       <h2>Get on the list</h2>
@@ -204,15 +203,16 @@ footer b{color:var(--ink)}
     <span class="section-h">What it catches</span>
     <div class="proof-copy">
       <h2>An easy mistake to make. An easy one to miss.</h2>
-      <p class="lede" style="font-size:16px">A stop code, a rate, a rounding rule — one line among dozens on a paystub. Here's the kind of thing that gets past a driver checking by hand, and doesn't get past an app that read the pay memo itself.</p>
+      <p class="lede" style="font-size:16px">A stop code, a rate, a rounding rule: one line among dozens on a paystub. Here's the kind of thing that slips past a driver checking by hand, and exactly what the app is built to catch.</p>
     </div>
     <div class="ledger">
       <div class="lhead"><span>Pay item</span><span style="text-align:right">Expected</span><span style="text-align:right">Paid</span></div>
       <div class="lrow"><div>Linehaul, 612 mi<span class="code">MI-01</span></div><div class="num">$342.72</div><div class="num">$342.72</div></div>
       <div class="lrow flag"><div>Delay time, 2.5 hr @ $20/hr<span class="code">DL-02 · after 2 hr free</span><span class="taglabel">Short $10.00</span></div><div class="num">$50.00</div><div class="num paid">$40.00</div></div>
-      <div class="lrow"><div>Stop pay, 2nd stop<span class="code">PD-02</span></div><div class="num">$25.00</div><div class="num">$25.00</div></div>
+      <div class="lrow"><div>Stop pay, 2nd stop<span class="code">SP-02</span></div><div class="num">$25.00</div><div class="num">$25.00</div></div>
       <div class="lrow flag"><div>Detention, customer B<span class="code">DT-01 · not on paystub</span><span class="taglabel">Missing</span></div><div class="num">$60.00</div><div class="num paid">$0.00</div></div>
     </div>
+    <p class="fineprint">Example for illustration. Not real pay data.</p>
     <p class="price-note">The app shows you the difference and where it came from. What you do with that — ask payroll, talk to dispatch, let it go — is always your call. It doesn't contact anyone for you, and it doesn't promise any money back.</p>
   </section>
 
@@ -245,8 +245,10 @@ footer b{color:var(--ink)}
           <p class="sub">One pay plan, one truck.</p>
         </div>
         <div class="price-rows">
-          <div class="price-row"><span class="label">Monthly</span><span class="amt"><span class="was">$9.99</span><span class="now">$6.99</span></span></div>
-          <div class="price-row"><span class="label">Yearly</span><span class="amt"><span class="was">$79.99</span><span class="now">$55.99</span></span></div>
+          <div class="price-row"><span class="label">Monthly</span><span class="amt"><span class="now">$6.99</span></span></div>
+          <div class="fineprint">founding price · regular price at launch $9.99</div>
+          <div class="price-row"><span class="label">Yearly</span><span class="amt"><span class="now">$55.99</span></span></div>
+          <div class="fineprint">founding price · regular price at launch $79.99</div>
         </div>
         <p class="trial">30-day free trial, cancel anytime.</p>
       </div>
@@ -257,13 +259,15 @@ footer b{color:var(--ink)}
           <p class="sub">Leased or own-authority, settlements and rate confirmations.</p>
         </div>
         <div class="price-rows">
-          <div class="price-row"><span class="label">Monthly</span><span class="amt"><span class="was">$19.99</span><span class="now">$13.99</span></span></div>
-          <div class="price-row"><span class="label">Yearly</span><span class="amt"><span class="was">$179.99</span><span class="now">$125.99</span></span></div>
+          <div class="price-row"><span class="label">Monthly</span><span class="amt"><span class="now">$13.99</span></span></div>
+          <div class="fineprint">founding price · regular price at launch $19.99</div>
+          <div class="price-row"><span class="label">Yearly</span><span class="amt"><span class="now">$125.99</span></span></div>
+          <div class="fineprint">founding price · regular price at launch $179.99</div>
         </div>
         <p class="trial">30-day free trial, cancel anytime.</p>
       </div>
     </div>
-    <p class="price-note">Billing isn't live yet — join the waitlist and drivers who sign up before launch keep the founding price for as long as they stay subscribed. Prices are in US dollars, set and charged through Google Play or the Apple App Store, and may change before the app goes on sale. A free plan may also be offered for basic use; details land closer to launch.</p>
+    <p class="price-note">Billing isn't live yet. Join the waitlist before launch and subscribe within 60 days after the app goes on sale to lock in the founding price. You keep it for as long as your subscription stays active without a break. Regular prices may change before launch. Prices are in US dollars and charged through Google Play or the Apple App Store. A free plan may also be offered for basic use; details closer to launch.</p>
   </section>
 
   <section>
@@ -292,7 +296,7 @@ footer b{color:var(--ink)}
       </details>
       <details>
         <summary>What if I'm a company driver, not an owner-operator?</summary>
-        <p>Both are supported from day one. Company drivers set up a pay plan from their pay memo; owner-operators add their lease or rate confirmations and settlement deductions. The app asks which you are during setup.</p>
+        <p>Both will be supported at launch. Company drivers set up a pay plan from their pay memo; owner-operators add their lease or rate confirmations and settlement deductions. The app asks which you are during setup.</p>
       </details>
       <details>
         <summary>Is my data sold or used for ads?</summary>
@@ -300,7 +304,7 @@ footer b{color:var(--ink)}
       </details>
       <details>
         <summary>What does it cost?</summary>
-        <p>Paid plans haven't launched yet. Everyone who joins the waitlist before launch keeps founding-driver pricing with a 30-day free trial once billing goes live — see <a href="#pricing">Pricing</a> above.</p>
+        <p>Paid plans haven't launched yet. Join the waitlist before launch and subscribe within 60 days after the app goes on sale to get the founding-driver price, with a 30-day free trial. See <a href="#pricing">Pricing</a> above.</p>
       </details>
       <details>
         <summary>When does the beta open?</summary>
@@ -313,6 +317,7 @@ footer b{color:var(--ink)}
     <p><b>Trucker Pay Protector™</b> checks your pay against your own documents. It isn't legal, tax, or payroll advice, and your employer's or broker's records remain the official ones.</p>
     <p>No ads. Nothing about your pay is sold. This page collects only what's shown above, to gauge interest before the app is built.</p>
     <p><a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/delete-account/">Delete your account</a></p>
+    <p>Google Play is a trademark of Google LLC. Apple and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
   </footer>
 
 </div>
