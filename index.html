@@ -3,16 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Trucker Pay Protector — Waitlist</title>
-<meta name="description" content="An app that checks your paycheck against your own pay documents. Join the waitlist for the beta.">
+<title>Trucker Pay Protector — Check your paycheck against your own documents</title>
+<meta name="description" content="An app that checks your paycheck against your own pay documents — for company drivers and owner-operators. Join the waitlist for the beta.">
+<link rel="canonical" href="https://truckerpayprotector.com/">
+<meta property="og:title" content="Trucker Pay Protector">
+<meta property="og:description" content="An app that checks your paycheck against your own pay documents. Join the waitlist for the beta.">
+<meta property="og:image" content="https://truckerpayprotector.com/assets/social-1200x630.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://truckerpayprotector.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 :root{
   --bg:#F4F5F3; --surface:#FFFFFF; --ink:#12161A; --muted:#5B6570; --line:#DADFDC;
-  --accent:#B85B0A; --accent-ink:#FFFFFF; --accent-fill:#FBE9D8;
+  --accent:#17664A; --accent-ink:#FFFFFF; --accent-fill:#E1F0E8; --accent-btn:#2A7D59;
   --good:#1D6A4C; --good-fill:#E1F0E8; --bad:#A3321F; --bad-fill:#FBE6E1;
+  --warn:#B85B0A; --warn-fill:#FBE9D8;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -22,8 +33,9 @@
   :root{
     color-scheme:dark;
     --bg:#0E1013; --surface:#171A1E; --ink:#EDEFEC; --muted:#98A0A8; --line:#2B2F34;
-    --accent:#E8862E; --accent-ink:#0E1013; --accent-fill:#2E2013;
+    --accent:#7FD1A8; --accent-ink:#0E1013; --accent-fill:#123626; --accent-btn:#2A7D59;
     --good:#3FA97C; --good-fill:#123626; --bad:#E8836F; --bad-fill:#3A1D17;
+    --warn:#E8862E; --warn-fill:#2E2013;
   }
 }
 *{box-sizing:border-box}
@@ -36,10 +48,9 @@ a{color:var(--accent)}
 img{max-width:100%}
 
 nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px 0;gap:12px;flex-wrap:wrap}
-.brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
-.brand .mark{width:11px;height:11px;border-radius:2px;background:var(--accent);flex:none}
-.brand small{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;font-weight:400}
-.navlinks{display:flex;gap:16px;font-size:14px}
+.brand{display:flex;align-items:center}
+.brand img{height:30px;width:auto;display:block}
+.navlinks{display:flex;gap:16px;font-size:14px;flex-wrap:wrap}
 .navlinks a{color:var(--muted);text-decoration:none}
 .navlinks a:hover{color:var(--ink)}
 
@@ -58,8 +69,8 @@ input,select{font:inherit;font-size:16px;padding:11px 12px;border-radius:6px;bor
 input:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:480px){.grid2{grid-template-columns:1fr}}
-button{font-family:var(--body);font-weight:700;font-size:16px;padding:13px 18px;border-radius:6px;border:none;background:var(--accent);color:var(--accent-ink);cursor:pointer}
-button:hover{filter:brightness(1.06)}
+button{font-family:var(--body);font-weight:700;font-size:16px;padding:13px 18px;border-radius:6px;border:none;background:var(--accent-btn);color:#fff;cursor:pointer}
+button:hover{filter:brightness(1.08)}
 button:disabled{opacity:.6;cursor:default}
 .fineprint{font-size:13px;color:var(--muted)}
 .confirm{display:none;flex-direction:column;gap:10px;text-align:left}
@@ -96,6 +107,36 @@ button:disabled{opacity:.6;cursor:default}
 section{display:flex;flex-direction:column;gap:20px}
 h2.section-h{font-size:13px;font-family:var(--mono);letter-spacing:.7px;text-transform:uppercase;color:var(--muted);font-weight:500}
 
+.soon{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--warn);background:var(--warn-fill);padding:3px 8px;border-radius:999px}
+
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.price-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:14px;position:relative}
+.price-card h3{font-size:20px}
+.price-card .sub{font-size:13.5px;color:var(--muted)}
+.price-rows{display:flex;flex-direction:column;gap:10px;padding-top:4px;border-top:1px solid var(--line)}
+.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.price-row .label{font-size:14px;color:var(--muted)}
+.price-row .amt{font-family:var(--mono);font-size:15px;text-align:right}
+.price-row .amt .was{color:var(--muted);text-decoration:line-through;font-size:13px;margin-right:6px}
+.price-row .amt .now{color:var(--accent);font-weight:700}
+.founding-badge{align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.4px;text-transform:uppercase;color:var(--accent);background:var(--accent-fill);padding:3px 8px;border-radius:999px}
+.price-card .trial{font-size:13px;color:var(--muted)}
+.price-note{font-size:13px;color:var(--muted);line-height:1.5}
+
+.store-row{display:flex;gap:12px;flex-wrap:wrap}
+.store-badge{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 16px;font-size:14px;color:var(--muted)}
+.store-badge b{color:var(--ink);font-weight:700;display:block;font-size:14.5px}
+.store-badge span.small{font-size:11.5px}
+
+.faq{display:flex;flex-direction:column;gap:2px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+.faq details + details{margin-top:10px}
+.faq summary{font-family:var(--body);font-weight:700;font-size:15.5px;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+ ";color:var(--accent);font-weight:800}
+.faq details[open] summary::before{content:"– "}
+.faq p{margin-top:10px;font-size:14.5px;color:var(--muted);line-height:1.55}
+
 footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:24px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
 footer b{color:var(--ink)}
 </style>
@@ -104,14 +145,19 @@ footer b{color:var(--ink)}
 <div class="wrap">
 
   <nav>
-    <div class="brand"><span class="mark"></span>Trucker Pay Protector<small>beta waitlist</small></div>
-    <div class="navlinks"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete-account/">Delete account</a></div>
+    <a class="brand" href="/" aria-label="Trucker Pay Protector">
+      <picture>
+        <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
+        <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector">
+      </picture>
+    </a>
+    <div class="navlinks"><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete-account/">Delete account</a></div>
   </nav>
 
   <section class="hero">
     <div class="eyebrow">Built by a driver, checked line by line</div>
     <h1>Your paycheck follows <em>your</em> rules. Make sure it actually does.</h1>
-    <p class="lede">Upload your pay memo, lease, or rate confirmations once. Every paycheck after that gets checked against them automatically — detention, delay pay, mileage, deductions, all of it. For company drivers and owner-operators.</p>
+    <p class="lede">Upload your pay memo, lease, or rate confirmations once. Every paycheck after that gets checked against them automatically — detention, delay pay, mileage, deductions, all of it. For company drivers and owner-operators, on Android and iPhone.</p>
 
     <div class="signup" id="signup-card">
       <h2>Get on the list</h2>
@@ -167,6 +213,7 @@ footer b{color:var(--ink)}
       <div class="lrow"><div>Stop pay, 2nd stop<span class="code">PD-02</span></div><div class="num">$25.00</div><div class="num">$25.00</div></div>
       <div class="lrow flag"><div>Detention, customer B<span class="code">DT-01 · not on paystub</span><span class="taglabel">Missing</span></div><div class="num">$60.00</div><div class="num paid">$0.00</div></div>
     </div>
+    <p class="price-note">The app shows you the difference and where it came from. What you do with that — ask payroll, talk to dispatch, let it go — is always your call. It doesn't contact anyone for you, and it doesn't promise any money back.</p>
   </section>
 
   <section>
@@ -188,8 +235,82 @@ footer b{color:var(--ink)}
     </div>
   </section>
 
+  <section id="pricing">
+    <span class="section-h">Pricing <span class="soon">Coming soon</span></span>
+    <div class="price-grid">
+      <div class="price-card">
+        <div>
+          <span class="founding-badge">Founding driver price</span>
+          <h3>Company driver</h3>
+          <p class="sub">One pay plan, one truck.</p>
+        </div>
+        <div class="price-rows">
+          <div class="price-row"><span class="label">Monthly</span><span class="amt"><span class="was">$9.99</span><span class="now">$6.99</span></span></div>
+          <div class="price-row"><span class="label">Yearly</span><span class="amt"><span class="was">$79.99</span><span class="now">$55.99</span></span></div>
+        </div>
+        <p class="trial">30-day free trial, cancel anytime.</p>
+      </div>
+      <div class="price-card">
+        <div>
+          <span class="founding-badge">Founding driver price</span>
+          <h3>Owner-operator</h3>
+          <p class="sub">Leased or own-authority, settlements and rate confirmations.</p>
+        </div>
+        <div class="price-rows">
+          <div class="price-row"><span class="label">Monthly</span><span class="amt"><span class="was">$19.99</span><span class="now">$13.99</span></span></div>
+          <div class="price-row"><span class="label">Yearly</span><span class="amt"><span class="was">$179.99</span><span class="now">$125.99</span></span></div>
+        </div>
+        <p class="trial">30-day free trial, cancel anytime.</p>
+      </div>
+    </div>
+    <p class="price-note">Billing isn't live yet — join the waitlist and drivers who sign up before launch keep the founding price for as long as they stay subscribed. Prices are in US dollars, set and charged through Google Play or the Apple App Store, and may change before the app goes on sale. A free plan may also be offered for basic use; details land closer to launch.</p>
+  </section>
+
+  <section>
+    <span class="section-h">Get the app <span class="soon">Coming soon</span></span>
+    <div class="store-row">
+      <div class="store-badge"><span><b>Google Play</b><span class="small">Coming soon</span></span></div>
+      <div class="store-badge"><span><b>Apple App Store</b><span class="small">Coming soon</span></span></div>
+    </div>
+    <p class="price-note">Not on either store yet. Join the waitlist above and we'll email you the moment the beta opens.</p>
+  </section>
+
+  <section id="faq">
+    <span class="section-h">FAQ</span>
+    <div class="faq">
+      <details>
+        <summary>Is this legal, tax, or payroll advice?</summary>
+        <p>No. Everything the app shows is an estimate based on your pay plan and the documents you give it. It doesn't interpret your contract as a matter of law, and it isn't a substitute for talking to your payroll department, a wage-and-hour agency, or a lawyer if something looks seriously wrong.</p>
+      </details>
+      <details>
+        <summary>Does it guarantee I'll get money back?</summary>
+        <p>No. The app shows you the difference between what your documents say you're owed and what you were actually paid, and where that number came from. It doesn't promise any recovery, doesn't file anything, and doesn't contact your employer or carrier for you — what you do with the information is always your decision.</p>
+      </details>
+      <details>
+        <summary>Does it tell my employer or carrier I'm using it?</summary>
+        <p>Never. We don't contact your employer, motor carrier, or their payroll providers, and we never share your data with them unless you send it to them yourself.</p>
+      </details>
+      <details>
+        <summary>What if I'm a company driver, not an owner-operator?</summary>
+        <p>Both are supported from day one. Company drivers set up a pay plan from their pay memo; owner-operators add their lease or rate confirmations and settlement deductions. The app asks which you are during setup.</p>
+      </details>
+      <details>
+        <summary>Is my data sold or used for ads?</summary>
+        <p>No. We don't sell your information, don't use it for advertising, and don't build profiles with it. Full details are in the <a href="/privacy/">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>Paid plans haven't launched yet. Everyone who joins the waitlist before launch keeps founding-driver pricing with a 30-day free trial once billing goes live — see <a href="#pricing">Pricing</a> above.</p>
+      </details>
+      <details>
+        <summary>When does the beta open?</summary>
+        <p>We don't have a fixed date yet. Waitlist sign-ups get first invites, with owner-operators and drivers on complex pay plans prioritized, since that's where the app has the most to check.</p>
+      </details>
+    </div>
+  </section>
+
   <footer>
-    <p><b>Trucker Pay Protector</b> checks your pay against your own documents. It isn't legal, tax, or payroll advice, and your employer's or broker's records remain the official ones.</p>
+    <p><b>Trucker Pay Protector™</b> checks your pay against your own documents. It isn't legal, tax, or payroll advice, and your employer's or broker's records remain the official ones.</p>
     <p>No ads. Nothing about your pay is sold. This page collects only what's shown above, to gauge interest before the app is built.</p>
     <p><a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/delete-account/">Delete your account</a></p>
   </footer>

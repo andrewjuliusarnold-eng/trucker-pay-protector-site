@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Terms of Service — Trucker Pay Protector</title>
 <meta name="description" content="The agreement between you and Trucker Pay Protector LLC for using the app on Android and iPhone, and the website.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 :root{
   --bg:#F4F5F3; --surface:#FFFFFF; --ink:#12161A; --muted:#5B6570; --line:#DADFDC;
-  --accent:#B85B0A; --accent-ink:#FFFFFF; --accent-fill:#FBE9D8;
+  --accent:#17664A; --accent-ink:#FFFFFF; --accent-fill:#E1F0E8;
   --flag:#A3321F; --flag-fill:#FBE6E1;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -22,7 +25,7 @@
   :root{
     color-scheme:dark;
     --bg:#0E1013; --surface:#171A1E; --ink:#EDEFEC; --muted:#98A0A8; --line:#2B2F34;
-    --accent:#E8862E; --accent-ink:#0E1013; --accent-fill:#2E2013;
+    --accent:#7FD1A8; --accent-ink:#0E1013; --accent-fill:#123626;
     --flag:#E8836F; --flag-fill:#3C1C16;
   }
 }
@@ -35,8 +38,8 @@ p,ul,ol{margin:0}
 a{color:var(--accent)}
 
 nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px 0;gap:12px;flex-wrap:wrap}
-.brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.2px;display:flex;align-items:center;gap:8px}
-.brand .mark{width:11px;height:11px;border-radius:2px;background:var(--accent);flex:none}
+.brand{display:flex;align-items:center}
+.brand img{height:26px;width:auto;display:block}
 .navlinks{display:flex;gap:16px;font-size:14px}
 .navlinks a{color:var(--muted);text-decoration:none}
 .navlinks a:hover{color:var(--ink)}
@@ -63,7 +66,12 @@ footer a{color:var(--muted)}
 <div class="wrap">
 
   <nav>
-    <div class="brand"><span class="mark"></span>Trucker Pay Protector</div>
+    <a class="brand" href="/" aria-label="Trucker Pay Protector">
+      <picture>
+        <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
+        <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector">
+      </picture>
+    </a>
     <div class="navlinks"><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete-account/">Delete account</a></div>
   </nav>
 
