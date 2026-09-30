@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.truckerpayprotector.app",
+    "sha256_cert_fingerprints": ["0C:80:5C:31:11:42:8F:7B:7A:41:7B:BE:4A:1B:7E:51:EE:29:2F:42:FE:04:79:2F:FA:0C:0D:A7:CB:78:A9:09"]
+  }
+}]
