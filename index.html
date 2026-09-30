@@ -355,6 +355,15 @@ footer b{color:var(--ink)}
   var ENTRY_EMAIL = 'entry.406664466';
   var ENTRY_DRIVERTYPE = 'entry.2094223645';
   var ENTRY_PAYTYPE = 'entry.1455988263';
+  var ENTRY_SOURCE = 'entry.237314048';
+  var SOURCE_LABELS = {
+    facebook: 'Facebook',
+    fbgroup: 'A Facebook group',
+    reddit: 'Reddit',
+    friend: 'A friend or another driver',
+    google: 'Google search',
+    podcast: 'Trucking news or podcast'
+  };
   var DRIVERTYPE_LABELS = {
     company: 'Company driver',
     leased: 'Leased owner-operator',
@@ -372,6 +381,14 @@ footer b{color:var(--ink)}
   var form = document.getElementById('signup-form');
   var confirmEl = document.getElementById('confirm');
   var errEl = document.getElementById('err');
+
+  function sourceFromUrl(){
+    try {
+      var params = new URLSearchParams(window.location.search);
+      return params.get('src') || '';
+    } catch(e){ return ''; }
+  }
+  var sourceKey = sourceFromUrl();
 
   function alreadyOpened(){
     try { return localStorage.getItem('tpp_waitlist_opened') === '1'; } catch(e){ return false; }
@@ -400,6 +417,10 @@ footer b{color:var(--ink)}
       + '&' + ENTRY_EMAIL + '=' + encodeURIComponent(email)
       + '&' + ENTRY_DRIVERTYPE + '=' + encodeURIComponent(DRIVERTYPE_LABELS[drivertype] || '')
       + '&' + ENTRY_PAYTYPE + '=' + encodeURIComponent(PAYTYPE_LABELS[paytype] || '');
+    var sourceLabel = SOURCE_LABELS[sourceKey];
+    if (sourceLabel) {
+      url += '&' + ENTRY_SOURCE + '=' + encodeURIComponent(sourceLabel);
+    }
     window.open(url, '_blank', 'noopener');
     markOpened();
     form.hidden = true;
