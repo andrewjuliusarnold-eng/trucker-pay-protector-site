@@ -135,7 +135,8 @@ footer a{color:var(--muted)}
   var form = document.getElementById('delete-form');
   if (!form) return;
   var status = document.getElementById('delete-form-status');
-  var MESSAGE = "Check your email. If an account uses that address, we've sent a link to delete it.";
+  var SENT_MESSAGE = "Check your email. If an account uses that address, we've sent a link to delete it.";
+  var ERROR_MESSAGE = "That didn't go through. Check your signal and try again, or email support@truckerpayprotector.com and we'll delete it for you.";
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var email = document.getElementById('delete-email').value;
@@ -146,13 +147,15 @@ footer a{color:var(--muted)}
       method: 'POST',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: 'email=' + encodeURIComponent(email)
-    }).then(function(){
-      status.textContent = MESSAGE;
+    }).then(function(res){
+      if (!res.ok) throw new Error('non-200');
+      status.textContent = SENT_MESSAGE;
       form.reset();
     }).catch(function(){
-      // Same message on a network/CORS error too: never reveal more than
-      // the server itself would about whether an address has an account.
-      status.textContent = MESSAGE;
+      // A real error (network failure or non-200) gets its own message:
+      // telling the driver a link is on its way when nothing sent would
+      // leave him waiting on an email that never comes.
+      status.textContent = ERROR_MESSAGE;
     }).finally(function(){
       btn.disabled = false;
     });
