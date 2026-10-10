@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About: Trucker Pay Protector</title>
+<meta name="description" content="Why a working truck driver built Trucker Pay Protector.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F7F5F8; --surface:#FFFFFF; --ink:#19151D; --muted:#4B4553; --line:#D9D4DE;
+  --accent:#6E2A78; --accent-ink:#FFFFFF; --accent-fill:#ECD7EF;
+  --flag:#A3321F; --flag-fill:#FBE6E1;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --bg:#000000; --surface:#18131B; --ink:#E0DDE4; --muted:#B5AFBD; --line:#2E2534;
+    --accent:#D7A8DE; --accent-ink:#18131B; --accent-fill:#3F1E46;
+    --flag:#E8836F; --flag-fill:#3C1C16;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-inline:16px;padding-block:0 48px;font-size:16px;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+p,ul,ol{margin:0}
+a{color:var(--accent)}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding-block:20px 0;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center}
+.brand img{height:26px;width:auto;display:block}
+.navlinks{display:flex;gap:16px;font-size:14px}
+.navlinks a{color:var(--muted);text-decoration:none}
+.navlinks a:hover{color:var(--ink)}
+
+header.page{display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line);padding-bottom:24px}
+h1{font-size:clamp(30px,6vw,42px);font-weight:800}
+.meta{font-family:var(--mono);font-size:13px;color:var(--muted)}
+
+.fill{background:var(--flag-fill);color:var(--flag);padding:1px 6px;border-radius:4px;font-family:var(--mono);font-size:.92em}
+
+.doc{display:flex;flex-direction:column;gap:22px}
+.doc section{display:flex;flex-direction:column;gap:10px}
+h2{font-size:22px;font-weight:700;margin-top:4px}
+.doc p{font-size:15.5px}
+.doc ul,.doc ol{padding-left:22px;display:flex;flex-direction:column;gap:6px;font-size:15.5px}
+.short{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.short p{font-size:15px}
+strong{font-weight:700}
+
+footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:24px;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+.fineprint{font-size:13px;color:var(--muted)}
+.story{display:flex;flex-direction:column;gap:20px}
+.story-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
+.story-copy{display:flex;flex-direction:column;gap:14px}
+.story-copy h2{font-size:26px;font-weight:800}
+.story-copy p{font-size:16px;line-height:1.6}
+.byline{display:flex;align-items:center;gap:10px;padding-top:4px}
+.byline img{width:44px;height:44px;border-radius:50%;object-fit:cover;display:block}
+.byline span{font-family:var(--mono);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="/" aria-label="Trucker Pay Protector">
+      <picture>
+        <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
+        <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector">
+      </picture>
+    </a>
+    <div class="navlinks"><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete-account/">Delete account</a></div>
+  </nav>
+
+  <header class="page">
+    <h1>About</h1>
+    <p class="meta">Our story</p>
+  </header>
+
+  <div class="story">
+      <img class="story-photo" src="/assets/pr/family-hero-4x3-1600.jpg" alt="Andrew with his wife and baby">
+      <p class="fineprint">Photo: Kencana Photography</p>
+      <div class="story-copy">
+        <h2>Why I built this</h2>
+        <p>Trucker Pay Protector reads your own pay memo, lease, or rate cons and goes through each paystub you add, line by line. Detention, layover, mileage, all of it. Here's why I built it.</p>
+        <p>I'm Andrew. I grew up in Ohio, I live in Florida now with my wife and our baby, and I drive over the road as a company driver.</p>
+        <p>For a long time I was leaving money on the table. My pay plan came as a whole packet of pay codes, rates and rules, and I'll be straight with you: I couldn't make sense of all of it. So I logged my miles and hours like everybody else and figured the check was right.</p>
+        <p>I got tired of guessing. I built myself a simple app to track my work against that packet, line by line. The first thing it showed me was pay I qualified for and had never been writing down. For me, that came to about $500 a week. That's my number on my pay plan. Most drivers will find less, and many will find their pay is already right. The app hasn't launched, so there's no typical number yet.</p>
+        <p>Nobody ever walked me through it, and I didn't know to claim it. That still makes me mad.</p>
+        <p>Then I started asking around. I wasn't the only one, and other drivers wanted to know how I did it. I'd built the app just for my own pay, so now I'm building it for everyone: company drivers and owner-operators, using your own pay documents.</p>
+        <p>That's Trucker Pay Protector. It doesn't change your pay plan. It helps you understand the one you already have and check each paystub you add against it.</p>
+        <div class="byline"><img src="/assets/pr/andrew-headshot-800.jpg" alt="Andrew, founder of Trucker Pay Protector"><span>- Andrew, founder</span></div>
+      </div>
+    </div>
+
+  <footer>
+    <p><a href="/">Trucker Pay Protector</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/delete-account/">Delete your account</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
