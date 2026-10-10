@@ -191,6 +191,7 @@ footer b{color:var(--ink)}
             <option value="" disabled selected>Choose one</option>
             <option value="mile">Per mile</option>
             <option value="activity">Per stop / activity codes</option>
+            <option value="mileactivity">Per mile plus activity pay</option>
             <option value="hourly">Hourly</option>
             <option value="percent">Percentage of load</option>
             <option value="settlement">Settlement statement</option>
@@ -204,7 +205,7 @@ footer b{color:var(--ink)}
         <span class="badge">One more step</span>
         <p>The form opened in a new tab with your answers already filled in. Hit Submit there and you're on the list. I'll send one email when the beta opens. Owner-operators and drivers with complicated pay plans get invited first.</p>
       </div>
-      <p class="fineprint">I'm seeing how many drivers want this before I finish building it. Sign-ups go to a Google Form. It's just your email and how you get paid, so I can build the beta around real pay plans like yours.</p>
+      <p class="fineprint">I'm seeing how many drivers want this before I finish building it. Sign-ups go to a Google Form. It's just your email, how you get paid and which phone you use, so I can build the beta around real pay plans like yours.</p>
       <p class="fineprint">Want in on early testing? Looking for 10-20 drivers with Android phones to try it first and help shape it before launch. Email <a href="mailto:support@truckerpayprotector.com?subject=Tester">support@truckerpayprotector.com</a> with "tester" in the subject and the Gmail you use on your phone.</p>
     </div>
   </section>
@@ -374,6 +375,7 @@ footer b{color:var(--ink)}
   var PAYTYPE_LABELS = {
     mile: 'Per mile',
     activity: 'Per stop / activity codes',
+    mileactivity: 'Per mile plus activity pay',
     hourly: 'Hourly',
     percent: 'Percentage of load',
     settlement: 'Settlement statement',
