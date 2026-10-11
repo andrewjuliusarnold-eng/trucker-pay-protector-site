@@ -78,7 +78,7 @@ footer a{color:var(--muted)}
 
   <header class="page">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: <span>October 10, 2026</span></p>
+    <p class="meta">Effective date: <span>October 11, 2026</span></p>
   </header>
 
   <div class="doc">
@@ -101,16 +101,17 @@ footer a{color:var(--muted)}
       <h2>1. Information we collect</h2>
       <p><strong>1.1 Information you give us</strong></p>
       <ul>
-        <li><strong>Account information:</strong> your email address and password. You need an account to use the App. Passwords are handled by Google Firebase Authentication. We never see or store your password itself.</li>
+        <li><strong>Account information:</strong> your email address and password, or your Google account's name and email if you sign in with Google. You need an account to use the App. Passwords are handled by Google Firebase Authentication. We never see or store your password itself.</li>
+        <li><strong>Profile:</strong> your name, truck number, and home city and state, used on your reports and to fill in your entries.</li>
         <li><strong>Work and pay information:</strong> the events you log (shifts, stops, loads, miles, hours, notes), your pay plan (pay rates and rules), your employer or carrier name if you enter it, and the pay the App calculates.</li>
         <li><strong>Documents you upload:</strong> photos or PDFs of pay stubs, settlement statements, rate confirmations, pay memos and similar documents. These can include personal details printed on them, such as your name, address, employee number, the last digits of bank or tax numbers, wages, deductions and year-to-date totals.</li>
         <li><strong>Questions you ask in the AI pay chat:</strong> the questions you tap or type in the App's pay chat, and the answers it gives.</li>
         <li><strong>Answers you report:</strong> if you tap "Report this answer" in the AI pay chat or "Report this review" on a paycheck review, we keep that question or review, the answer and any reason you type, on our servers, so a person can review it.</li>
-        <li><strong>Problem reports (test version only):</strong> if you send one, your note, a picture of the screen (unless you turn it off), the pay numbers on it, your app version, phone model and your last few button taps.</li>
+        <li><strong>Problem reports:</strong> if you send one, your note, a picture of the screen (unless you turn it off), the pay numbers on it, the name of the screen, your app version, phone model, your last few button taps and, if the App closed unexpectedly, the reason your phone gave.</li>
         <li><strong>Messages to us:</strong> anything you send when you contact support.</li>
         <li><strong>Waitlist sign-ups:</strong> if you join the waitlist on our website, your email address, driver type (company or owner-operator), how you are paid, which phone you use and, if you choose to answer, how you heard about us. The waitlist form is run by Google Forms.</li>
       </ul>
-      <p><strong>1.2 Location</strong><br>If you allow location access, the App reads your phone's precise location once, at the moment you tap to log an event, to fill in where the event happened. We store that location and the place name with the event. The App does not read your location in the background, when the App is closed, or between events, and it does not record your route. You can deny or turn off location access in your phone's settings at any time. The App still works, and you can type places in yourself.</p>
+      <p><strong>1.2 Location</strong><br>If you allow location access, the App reads your phone's precise location once, at the moment you tap to log an event, to fill in where the event happened. We store that location and the place name with the event. To turn the reading into a place name, your phone's built-in map service (Google on Android, Apple on iPhone) receives the location. The App does not read your location in the background, when the App is closed, or between events, and it does not record your route. You can deny or turn off location access in your phone's settings at any time. The App still works, and you can type places in yourself.</p>
       <p><strong>1.3 Subscription information</strong><br>Subscriptions are sold through the app store you use: Google Play on Android or the Apple App Store on iPhone. We receive your subscription status, plan, trial and renewal dates, and a purchase identifier from that app store, through our subscription service provider, RevenueCat. We never receive your card number or other payment details. Google or Apple handles those.</p>
       <p><strong>1.4 Technical information</strong><br>When you use the App we receive basic technical information needed to run it securely, such as your device model, operating system version, App version, and error and crash reports. A crash report holds the type of error, technical details of where the App failed, and your account ID, so we can fix the bug. It doesn't include your pay records, documents, messages or location. To stop fake apps and automated abuse, the App may also ask Google Play Integrity (through Firebase App Check) to confirm that a request comes from our real App on a real device. Our servers (Google Firebase) automatically log IP addresses, request times and the result of that device check, for security and to limit abuse. We don't use advertising IDs (such as Android's Advertising ID or Apple's IDFA), we don't track you across other companies' apps or websites, and we don't use ad or marketing trackers in the App or on our website.</p>
       <p id="pay-report"><strong>1.5 Driver pay report (optional)</strong><br>When you sign up, the App shows you our driver pay report on its own screen, which shows how often and by how much drivers' paychecks differ from their pay plans. <strong>It's on unless you turn it off on that screen</strong>, and saying no changes nothing else in the App. If you skip that screen, or you signed up before October 4, 2026, it's off unless you turn it on. You can turn it on or off any time in <strong>More &gt; Profile &gt; Privacy</strong>. Turning it off deletes the summaries you sent.</p>
@@ -126,7 +127,7 @@ footer a{color:var(--muted)}
 
     <section>
       <h2>2. Where your information is stored</h2>
-      <p>Most of your work records are stored on your phone. When backup is on, a copy of your records and documents is stored in our cloud account at Google Firebase (servers in the United States) so you can restore them on a new phone. Documents you upload for AI reading are stored in Firebase Storage.</p>
+      <p>Most of your work records are stored on your phone. When you're signed in, a copy of your records and documents is stored in our cloud account at Google Firebase (servers in the United States) so you can restore them on a new phone. Documents you upload for AI reading are stored in Firebase Storage.</p>
     </section>
 
     <section>
@@ -156,7 +157,7 @@ footer a{color:var(--muted)}
       <p>The App uses AI in three places:</p>
       <ul>
         <li><strong>Document reading.</strong> When you ask the App to read a document, our server sends that document (or the relevant pages).</li>
-        <li><strong>AI pay chat (formerly Gut Check).</strong> When you ask a question, our server sends your question and a short written summary of your own pay plan and the pay period you're asking about. It does not send your documents or photos.</li>
+        <li><strong>AI pay chat (formerly Gut Check).</strong> When you ask a question, our server sends your question and a short written summary of your own pay plan and the pay period you're asking about, including short quotes from your own pay documents, load numbers, place, customer and terminal names, and notes you wrote on those days. It does <strong>not</strong> send whole documents or photos.</li>
         <li><strong>Paycheck review.</strong> When you tap "Review my paycheck", our server sends the differences the App found on that paycheck, your pay plan's rules, and the few lines of your own pay documents that bear on them. It does not send whole documents, photos or your name.</li>
       </ul>
       <p>In each case the data goes to Anthropic, the company that makes the Claude AI models, through Anthropic's business API. Anthropic processes it only to return the result to us, as our service provider. Under Anthropic's commercial terms, Anthropic does not use this data to train its models, and it keeps API data for no more than 30 days, except where the law requires longer or where Anthropic's automated safety systems flag content for review (in which case it may be kept up to 2 years). Only use these features for information you are comfortable sending to our service provider.</p>
@@ -166,7 +167,7 @@ footer a{color:var(--muted)}
       <h2>5. Who we share information with</h2>
       <p>We share information only in these cases:</p>
       <ul>
-        <li><strong>Service providers</strong> that run parts of the App for us, under contracts that limit how they can use it: Google (Firebase sign-in, database, file storage, server functions, crash reporting, app integrity checks, and Google Play billing), Apple (App Store billing, for iPhone users), Anthropic (AI document reading, Section 4), RevenueCat (subscription status), GitHub (hosts our website), Google Forms (waitlist), and an email service that sends our emails for us.</li>
+        <li><strong>Service providers</strong> that run parts of the App for us, under contracts that limit how they can use it: Google (Firebase sign-in, database, file storage, server functions, crash reporting, app integrity checks, and Google Play billing), Apple (App Store billing, for iPhone users), Anthropic (AI features, Section 4), RevenueCat (subscription status), GitHub (hosts our website), Google Forms (waitlist), and an email service that sends our emails for us.</li>
         <li><strong>When you choose to share.</strong> For example, when you send a pay summary or message from the App using your phone's share button, it goes to whoever you choose.</li>
         <li><strong>Legal reasons:</strong> if required by law, court order or subpoena, or to protect the rights, safety or property of our users, the public or us. Where the law allows, we will try to tell you before handing over your data.</li>
         <li><strong>Business transfer:</strong> if our company is merged, acquired or sold, your information may transfer to the new owner, who must follow this policy or give you notice and a choice.</li>
@@ -186,7 +187,7 @@ footer a{color:var(--muted)}
         <li><strong>Unsubscribes:</strong> if you unsubscribe, we keep your email address on a do-not-email list so we don't send you news emails again.</li>
         <li><strong>Problem reports:</strong> deleted after 90 days, including our email copies.</li>
         <li><strong>Crash reports:</strong> kept for up to 90 days, then deleted automatically. After you delete your account, any crash reports already sent age out on that same schedule.</li>
-        <li><strong>When you delete your account:</strong> we delete your account, records, documents, reported answers and locations from our active systems within 30 days. Copies in backup systems are overwritten within 90 days. Deleting in the App also clears everything the App saved on that phone. If you use the App on more than one phone, clear the others by uninstalling it there.</li>
+        <li><strong>When you delete your account:</strong> we delete your account, records, documents, reported answers and locations from our active systems within 30 days. Copies in backup systems are overwritten <strong>within 100 days</strong>. Problem reports and other records that have expired also leave our backups by then. Deleting in the App also clears everything the App saved on that phone. If you use the App on more than one phone, clear the others by uninstalling it there.</li>
         <li><strong>Switching accounts on one phone:</strong> when a different account signs in, the App clears the phone first. One account's records are never moved into another account.</li>
         <li><strong>What we keep after deletion:</strong> a record that the account was deleted and when; subscription and transaction records needed for taxes and accounting (up to 7 years); and anything we're legally required to keep or need for a legal claim. These are kept only for those purposes.</li>
         <li><strong>Waitlist:</strong> kept until the App launches publicly plus 12 months, or until you ask us to remove you, whichever comes first.</li>
