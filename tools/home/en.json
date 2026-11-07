@@ -3,14 +3,14 @@
   "dir": "ltr",
   "lang_name": "English",
   "title": "Trucker Pay Protector: Check every paycheck against your own pay plan",
-  "meta_desc": "An Android app that checks each paystub or settlement against your own pay papers. For company drivers and owner-operators. Built by a working OTR driver.",
+  "meta_desc": "An Android app that checks each paystub or settlement against your own pay papers. For company drivers and owner-operators. Built by a working long-haul truck driver.",
   "nav_how": "How it works",
   "nav_pricing": "Pricing",
   "nav_faq": "Questions",
   "nav_story": "Our story",
   "nav_login": "Log in",
   "lang_label": "Language",
-  "kicker_hero": "Built by a working OTR driver",
+  "kicker_hero": "Built by a working long-haul truck driver",
   "h1_a": "Check every paycheck against",
   "h1_b": "your own pay plan.",
   "lede": "Add your pay papers one time. Then the app checks each paystub for you, line by line.",
@@ -70,7 +70,7 @@
   "b3_p": "You can see the lines that miss again and again, with the proof ready to show.",
   "web_kicker": "Your account on the web",
   "web_h": "Use a big screen at home.",
-  "web_p": "Sign in on a computer with the same account. See all your weeks. Make the report you send your boss. Print a year-end summary.",
+  "web_p": "Sign in on a computer with the same account. See all your weeks. Make a report you can send. Print a year-end summary.",
   "web_btn": "Log in to your account",
   "web_week": "Week",
   "web_lines": "Lines",
@@ -100,7 +100,7 @@
   "founding_badge": "Founding price",
   "p1_found": "On our waitlist? Pay $6.99 a month or $55.99 a year.",
   "p2_found": "On our waitlist? Pay $13.99 a month or $111.99 a year.",
-  "price_note": "30-day free trial on both. To get the founding price, start within 60 days after launch. Your free trial counts. You keep the price as long as you stay subscribed with no break. Prices are in US dollars, paid through Google Play.",
+  "price_note": "30-day free trial on both. To get the founding price, start within 60 days after launch. Starting your free trial counts as starting. You keep the price as long as you stay subscribed with no break. Prices are in US dollars, paid through Google Play.",
   "faq_kicker": "Questions",
   "faq_h": "Good to know",
   "faq": [
@@ -114,7 +114,7 @@
     ],
     [
       "Will my employer or carrier know I use it?",
-      "No. We never contact your employer, your carrier or their payroll company. We only share what you choose to send."
+      "Not from us. We never contact your employer, your carrier or their payroll company. We only share what you choose to send."
     ],
     [
       "Is there an iPhone app?",

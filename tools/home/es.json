@@ -17,7 +17,7 @@
   "play_small": "DISPONIBLE EN",
   "play_alt": "Disponible en Google Play",
   "apple_title": "iPhone",
-  "apple_soon": "Muy pronto",
+  "apple_soon": "Próximamente",
   "trial_line": "30 días de prueba gratis. Cancele cuando quiera en Google Play.",
   "phone_week": "SEMANA DEL 26 DE OCT",
   "phone_title": "Revisión del cheque",
@@ -43,7 +43,16 @@
   "s4_p": "La app revisa cada línea. Le muestra cualquier línea que no cuadre, y por qué.",
   "what_kicker": "Qué revisa",
   "what_h": "Las líneas pequeñas suman.",
-  "chips": ["Millas y pago por milla", "Pago por parada y actividad", "Tiempo de espera y demora", "Por hora y horas extra", "Porcentaje de la carga", "Descanso fuera y avería", "Descuentos y depósito", "Combustible y adelantos"],
+  "chips": [
+    "Millas y pago por milla",
+    "Pago por parada y actividad",
+    "Tiempo de espera y demora",
+    "Por hora y horas extra",
+    "Porcentaje de la carga",
+    "Descanso fuera y avería",
+    "Descuentos y depósito",
+    "Combustible y adelantos"
+  ],
   "who1_h": "Choferes de compañía",
   "who1_p": "Pagados por milla, por hora o por parada.",
   "who2_h": "Dueños-operadores arrendados",
@@ -61,7 +70,7 @@
   "b3_p": "Puede ver las líneas que fallan una y otra vez, con la prueba lista para mostrar.",
   "web_kicker": "Su cuenta en la web",
   "web_h": "Use una pantalla grande en casa.",
-  "web_p": "Entre en una computadora con la misma cuenta. Vea todas sus semanas. Haga el reporte que le manda a su jefe. Imprima un resumen de fin de año.",
+  "web_p": "Entre en una computadora con la misma cuenta. Vea todas sus semanas. Haga un reporte que puede enviar. Imprima un resumen de fin de año.",
   "web_btn": "Entrar a su cuenta",
   "web_week": "Semana",
   "web_lines": "Líneas",
@@ -91,18 +100,42 @@
   "founding_badge": "Precio de fundador",
   "p1_found": "¿Está en nuestra lista de espera? Pague $6.99 al mes o $55.99 al año.",
   "p2_found": "¿Está en nuestra lista de espera? Pague $13.99 al mes o $111.99 al año.",
-  "price_note": "30 días de prueba gratis en los dos. Para tener el precio de fundador, empiece dentro de los 60 días después del lanzamiento. Su prueba gratis cuenta. Usted mantiene el precio mientras siga suscrito sin pausa. Los precios son en dólares de EE. UU. y se pagan por Google Play.",
+  "price_note": "30 días de prueba gratis en los dos. Para tener el precio de fundador, empiece dentro de los 60 días después del lanzamiento. Empezar su prueba gratis cuenta como empezar. Usted mantiene el precio mientras siga suscrito sin pausa. Los precios son en dólares de EE. UU. y se pagan por Google Play.",
   "faq_kicker": "Preguntas",
   "faq_h": "Bueno saber",
   "faq": [
-    ["¿Esto es consejo legal, de impuestos o de nómina?", "No. La app le muestra lo que dicen sus papeles y lo que dice su talón de pago. Si algo se ve muy mal, hable con su oficina de nómina, la oficina de trabajo de su estado o un abogado."],
-    ["¿Me promete que voy a recibir dinero?", "No. Le muestra qué líneas no cuadran, y de dónde salió cada número. No presenta nada ni llama a nadie por usted."],
-    ["¿Mi empleador o transportista va a saber que la uso?", "No. Nunca contactamos a su empleador, a su transportista ni a su compañía de nómina. Solo compartimos lo que usted decida mandar."],
-    ["¿Hay una app para iPhone?", "Todavía no. Por ahora la app es para teléfonos Android. La app para iPhone viene muy pronto."],
-    ["¿Para quién es?", "Para choferes de compañía y dueños-operadores, arrendados o con su propia autoridad. La app le pregunta cuál es usted cuando la configura."],
-    ["¿Venden mi información o la usan para anuncios?", "No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href=\"/privacy/\">Política de privacidad</a> (en inglés)."],
-    ["¿Cómo borro mi cuenta?", "Puede borrarla en la app. También puede usar nuestra <a href=\"/delete-account/\">página para borrar la cuenta</a> (en inglés)."],
-    ["¿Cómo consigo ayuda?", "Escríbanos a <a href=\"mailto:support@truckerpayprotector.com\">support@truckerpayprotector.com</a>."]
+    [
+      "¿Esto es consejo legal, de impuestos o de nómina?",
+      "No. La app le muestra lo que dicen sus papeles y lo que dice su talón de pago. Si algo se ve muy mal, hable con su oficina de nómina, la oficina de trabajo de su estado o un abogado."
+    ],
+    [
+      "¿Me promete que voy a recibir dinero?",
+      "No. Le muestra qué líneas no cuadran, y de dónde salió cada número. No presenta nada ni llama a nadie por usted."
+    ],
+    [
+      "¿Mi empleador o transportista va a saber que la uso?",
+      "No por nosotros. Nunca contactamos a su empleador, a su transportista ni a su compañía de nómina. Solo compartimos lo que usted decida mandar."
+    ],
+    [
+      "¿Hay una app para iPhone?",
+      "Todavía no. Por ahora la app es para teléfonos Android. La app para iPhone llegará pronto."
+    ],
+    [
+      "¿Para quién es?",
+      "Para choferes de compañía y dueños-operadores, arrendados o con su propia autoridad. La app le pregunta cuál es usted cuando la configura."
+    ],
+    [
+      "¿Venden mi información o la usan para anuncios?",
+      "No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href=\"/privacy/\">Política de privacidad</a> (en inglés)."
+    ],
+    [
+      "¿Cómo borro mi cuenta?",
+      "Puede borrarla en la app. También puede usar nuestra <a href=\"/delete-account/\">página para borrar la cuenta</a> (en inglés)."
+    ],
+    [
+      "¿Cómo consigo ayuda?",
+      "Escríbanos a <a href=\"mailto:support@truckerpayprotector.com\">support@truckerpayprotector.com</a>."
+    ]
   ],
   "cta_h": "Revise su próximo cheque.",
   "foot_line": "Trucker Pay Protector revisa su pago con sus propios papeles. No es consejo legal, de impuestos ni de nómina. Los registros de su empleador o de su agente son los oficiales.",
