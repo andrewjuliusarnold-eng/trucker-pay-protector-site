@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /confirmed/
+
+Sitemap: https://truckerpayprotector.com/sitemap.xml
