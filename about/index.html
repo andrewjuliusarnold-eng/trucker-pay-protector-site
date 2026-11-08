@@ -3,13 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>About: Trucker Pay Protector</title>
+<title>Our story: Trucker Pay Protector</title>
 <meta name="description" content="Why a working truck driver built Trucker Pay Protector.">
+<meta property="og:title" content="Our story: Trucker Pay Protector">
+<meta property="og:description" content="Why a working truck driver built Trucker Pay Protector.">
+<meta property="og:image" content="https://truckerpayprotector.com/assets/social-plum-1200x630.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://truckerpayprotector.com/about/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg?v=plum2" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico?v=plum2" sizes="any">
 <link rel="icon" href="/favicon-48.png?v=plum2" sizes="48x48" type="image/png">
 <link rel="icon" href="/icon-192.png?v=plum2" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=plum2">
+<link rel="canonical" href="https://truckerpayprotector.com/about/">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,16 +73,20 @@ footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:24px;dis
 footer a{color:var(--muted)}
 .fineprint{font-size:13px;color:var(--muted)}
 .story{display:flex;flex-direction:column;gap:20px}
-.story-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
+.story-photo{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block}
 .story-copy{display:flex;flex-direction:column;gap:14px}
 .story-copy h2{font-size:26px;font-weight:800}
 .story-copy p{font-size:16px;line-height:1.6}
 .byline{display:flex;align-items:center;gap:10px;padding-top:4px}
 .byline img{width:44px;height:44px;border-radius:50%;object-fit:cover;display:block}
 .byline span{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.skip{position:absolute;left:-9999px;top:8px;z-index:10;background:var(--surface);color:var(--ink);padding:10px 14px;border-radius:8px;border:2px solid var(--accent)}
+.skip:focus{left:16px}
+footer a{display:inline-block;padding-block:4px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to the main part</a>
 <div class="wrap">
 
   <nav>
@@ -88,13 +99,13 @@ footer a{color:var(--muted)}
     <div class="navlinks"><a href="/">Home</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://account.truckerpayprotector.com/">Log in</a></div>
   </nav>
 
+  <main id="main">
   <header class="page">
-    <h1>About</h1>
-    <p class="meta">Our story</p>
+    <h1>Our story</h1>
   </header>
 
   <div class="story">
-      <img class="story-photo" src="/assets/pr/family-hero-4x3-1600.jpg" alt="Andrew with his wife and baby">
+      <img class="story-photo" src="/assets/pr/family-hero-4x3-1600.jpg" alt="Andrew with his wife and baby" width="1600" height="1200">
       <p class="fineprint">Photo: Kencana Photography</p>
       <div class="story-copy">
         <h2>Why I built this</h2>
@@ -105,12 +116,14 @@ footer a{color:var(--muted)}
         <p>Nobody ever walked me through it, and I didn't know to claim it. That still makes me mad.</p>
         <p>Then I started asking around. I wasn't the only one, and other drivers wanted to know how I did it. I'd built the app just for my own pay, so now I'm building it for everyone: company drivers and owner-operators, using your own pay documents.</p>
         <p>That's Trucker Pay Protector. It doesn't change your pay plan. It helps you understand the one you already have and check each paystub you add against it.</p>
-        <div class="byline"><img src="/assets/pr/andrew-headshot-800.jpg" alt="Andrew, founder of Trucker Pay Protector"><span>- Andrew, founder</span></div>
+        <div class="byline"><img src="/assets/pr/andrew-headshot-800.jpg" alt="Andrew, founder of Trucker Pay Protector" width="44" height="44" loading="lazy"><span>- Andrew, founder</span></div>
       </div>
     </div>
 
+  </main>
+
   <footer>
-    <p><a href="/">Trucker Pay Protector</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/delete-account/">Delete your account</a></p>
+    <p><a href="/">Trucker Pay Protector</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/delete-account/">Delete your account</a> · <a href="mailto:support@truckerpayprotector.com">Get help</a></p>
   </footer>
 
 </div>
