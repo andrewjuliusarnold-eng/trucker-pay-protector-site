@@ -2,6 +2,7 @@
 <html lang="pa" dir="ltr">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Trucker Pay Protector: ਹਰ ਤਨਖਾਹ ਨੂੰ ਆਪਣੇ ਪੇਅ ਪਲੈਨ ਨਾਲ ਮਿਲਾਓ</title>
 <meta name="description" content="ਇੱਕ ਐਂਡਰਾਇਡ ਐਪ ਜੋ ਹਰ ਪੇਅ ਸਲਿੱਪ ਜਾਂ ਸੈਟਲਮੈਂਟ ਨੂੰ ਤੁਹਾਡੇ ਆਪਣੇ ਪੇਅ ਕਾਗਜ਼ਾਂ ਨਾਲ ਮਿਲਾਉਂਦੀ ਹੈ। ਕੰਪਨੀ ਡਰਾਈਵਰਾਂ ਅਤੇ ਓਨਰ-ਆਪਰੇਟਰਾਂ ਲਈ। ਇੱਕ ਲੰਬੇ ਰੂਟ ਦੇ ਡਰਾਈਵਰ ਨੇ ਬਣਾਈ।">
@@ -170,16 +171,6 @@
   <p class="tm">Google Play ਅਤੇ Google Play ਲੋਗੋ Google LLC ਦੇ ਟ੍ਰੇਡਮਾਰਕ ਹਨ। iPhone, Apple Inc. ਦਾ ਟ੍ਰੇਡਮਾਰਕ ਹੈ।</p>
   <p class="tm">© 2026 Trucker Pay Protector LLC</p>
 </div></footer>
-<script>
-// The language menu closes with Escape or a tap outside it.
-(function(){
-  var d = document.querySelector('details.lang');
-  if (!d) return;
-  document.addEventListener('click', function(e){ if (d.open && !d.contains(e.target)) d.open = false; });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); }
-  });
-})();
-</script>
+<script src="/assets/site.js?v=2026-11-11" defer></script>
 </body>
 </html>

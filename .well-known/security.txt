@@ -1,0 +1,4 @@
+Contact: mailto:support@truckerpayprotector.com
+Expires: 2027-11-11T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://truckerpayprotector.com/.well-known/security.txt

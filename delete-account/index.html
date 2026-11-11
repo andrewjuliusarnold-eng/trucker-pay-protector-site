@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Delete Your Account: Trucker Pay Protector</title>
 <meta name="description" content="How to delete your Trucker Pay Protector account and data, with or without the app.">
@@ -65,7 +66,6 @@
         <label for="delete-email" class="sr-only">Email address</label>
         <input type="email" id="delete-email" name="email" required placeholder="you@example.com" autocomplete="email">
         <button type="submit">Send me the link</button>
-        <p class="status" id="delete-form-status" role="status" aria-live="polite"></p>
       </form>
       <p>Prefer email? Write to <a class="addr" href="mailto:support@truckerpayprotector.com?subject=Delete%20my%20account">support@truckerpayprotector.com</a> with the subject <strong>Delete my account</strong> and the email address your account uses instead.</p>
       <p>Deleting by email or with the form above doesn't clear the app on your phone. Uninstall it to remove what's there.</p>
@@ -95,37 +95,5 @@
   </footer>
 
 </div>
-<script>
-(function(){
-  var form = document.getElementById('delete-form');
-  if (!form) return;
-  var status = document.getElementById('delete-form-status');
-  var SENT_MESSAGE = "Check your email. If an account uses that address, we've sent a link to delete it.";
-  var ERROR_MESSAGE = "That didn't go through. Check your signal and try again, or email support@truckerpayprotector.com and we'll delete it for you.";
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var email = document.getElementById('delete-email').value;
-    var btn = form.querySelector('button');
-    btn.disabled = true;
-    status.textContent = '';
-    fetch(form.action, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: 'email=' + encodeURIComponent(email)
-    }).then(function(res){
-      if (!res.ok) throw new Error('non-200');
-      status.textContent = SENT_MESSAGE;
-      form.reset();
-    }).catch(function(){
-      // A real error (network failure or non-200) gets its own message:
-      // telling the driver a link is on its way when nothing sent would
-      // leave him waiting on an email that never comes.
-      status.textContent = ERROR_MESSAGE;
-    }).finally(function(){
-      btn.disabled = false;
-    });
-  });
-})();
-</script>
 </body>
 </html>

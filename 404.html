@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Page not found: Trucker Pay Protector</title>
 <meta name="robots" content="noindex">
@@ -17,10 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap">
 <link rel="stylesheet" href="/assets/pages.css?v=2026-11-11">
-<script>
-// "truckerpayprotector.com/account/anything" is an account page: send it to the account site (see /account/).
-if (/^\/account(\/|$)/i.test(location.pathname)) location.replace('https://account.truckerpayprotector.com/');
-</script>
+<script src="/assets/forward.js?v=2026-11-11"></script>
 </head>
 <body class="center">
 <a class="skip" href="#main">Skip to the main part</a>
