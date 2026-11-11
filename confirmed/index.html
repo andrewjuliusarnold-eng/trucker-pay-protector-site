@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Email Confirmed: Trucker Pay Protector</title>
 <meta name="description" content="Your Trucker Pay Protector email is confirmed. Open the app to continue.">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B080D" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg?v=plum2" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico?v=plum2" sizes="any">
 <link rel="icon" href="/favicon-48.png?v=plum2" sizes="48x48" type="image/png">
@@ -14,47 +16,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
-<style>
-:root{
-  --bg:#F7F5F8; --surface:#FFFFFF; --ink:#19151D; --muted:#4B4553; --line:#D9D4DE;
-  --accent:#6E2A78; --accent-ink:#FFFFFF; --accent-fill:#ECD7EF;
-  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  color-scheme:light;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    color-scheme:dark;
-    --bg:#000000; --surface:#18131B; --ink:#E0DDE4; --muted:#B5AFBD; --line:#2E2534;
-    --accent:#D7A8DE; --accent-ink:#18131B; --accent-fill:#3F1E46;
-  }
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;height:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-inline:16px;font-size:16px;line-height:1.6;min-height:100%;display:flex;flex-direction:column}
-.wrap{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:28px;flex:1;width:100%}
-h1{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1;font-size:clamp(28px,6vw,38px);font-weight:800}
-p{margin:0}
-a{color:var(--accent)}
-
-nav{display:flex;align-items:center;justify-content:center;padding-block:20px 0}
-.brand{display:flex;align-items:center}
-.brand img{height:26px;width:auto;display:block}
-
-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding-block:32px}
-.badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:999px;background:var(--accent-fill);color:var(--accent);font-size:28px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;font-size:14.5px;color:var(--muted)}
-
-footer{border-top:1px solid var(--line);padding-top:20px;padding-bottom:24px;text-align:center;font-size:13px;color:var(--muted)}
-footer a{color:var(--muted)}
-.skip{position:absolute;left:-9999px;top:8px;z-index:10;background:var(--surface);color:var(--ink);padding:10px 14px;border-radius:8px;border:2px solid var(--accent)}
-.skip:focus{left:16px}
-footer a{display:inline-block;padding-block:4px}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap">
+<link rel="stylesheet" href="/assets/pages.css?v=2026-11-11">
 </head>
-<body>
+<body class="center">
 <a class="skip" href="#main">Skip to the main part</a>
 <div class="wrap">
 
@@ -62,7 +27,7 @@ footer a{display:inline-block;padding-block:4px}
     <a class="brand" href="/" aria-label="Trucker Pay Protector">
       <picture>
         <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
-        <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector">
+        <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector" width="98" height="32">
       </picture>
     </a>
   </nav>
@@ -75,7 +40,8 @@ footer a{display:inline-block;padding-block:4px}
   </main>
 
   <footer>
-    <p><a href="/">Trucker Pay Protector</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="mailto:support@truckerpayprotector.com">Get help</a></p>
+    <p class="row"><a href="/">Home</a><a href="/about/">Our story</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a><a href="/delete-account/">Delete your account</a><a href="mailto:support@truckerpayprotector.com">Get help</a></p>
+    <p class="tm">© 2026 Trucker Pay Protector LLC</p>
   </footer>
 
 </div>
