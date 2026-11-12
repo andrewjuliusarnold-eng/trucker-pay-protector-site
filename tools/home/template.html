@@ -2,12 +2,17 @@
 <html lang="{{lang}}" dir="{{dir}}">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{{title}}</title>
 <meta name="description" content="{{meta_desc}}">
 <link rel="canonical" href="https://truckerpayprotector.com{{path}}">
 {{hreflang}}
-<meta property="og:title" content="Trucker Pay Protector">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B080D" media="(prefers-color-scheme: dark)">
+<meta property="og:site_name" content="Trucker Pay Protector">
+{{og_locale}}
+<meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{meta_desc}}">
 <meta property="og:image" content="https://truckerpayprotector.com/assets/social-plum-1200x630.png">
 <meta property="og:image:width" content="1200">
@@ -15,6 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://truckerpayprotector.com{{path}}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{meta_desc}}">
 <meta name="twitter:image" content="https://truckerpayprotector.com/assets/social-plum-1200x630.png">
 <meta name="google-play-app" content="app-id=com.truckerpayprotector.app">
 <link rel="icon" href="/favicon.svg?v=plum2" type="image/svg+xml">
@@ -26,7 +33,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=2026-11-07">
+<link rel="stylesheet" href="/assets/site.css?v=2026-11-11">
+<script type="application/ld+json">{{json_ld}}</script>
 </head>
 <body>
 <a class="skip" href="#main">{{skip}}</a>
@@ -43,7 +51,7 @@
         <a href="#how">{{nav_how}}</a><a href="#pricing">{{nav_pricing}}</a><a href="#faq">{{nav_faq}}</a><a href="/about/">{{nav_story}}</a>
       </div>
       <details class="lang">
-        <summary aria-label="{{lang_label}}">{{lang_name}}</summary>
+        <summary><span class="vh">{{lang_label}}: </span>{{lang_name}}</summary>
         <ul>{{lang_links}}</ul>
       </details>
       <a class="login" href="{{account_url}}">{{nav_login}}</a>
@@ -154,5 +162,6 @@
   <p class="tm">{{tm_line}}</p>
   <p class="tm">© 2026 Trucker Pay Protector LLC</p>
 </div></footer>
+<script src="/assets/site.js?v=2026-11-11" defer></script>
 </body>
 </html>

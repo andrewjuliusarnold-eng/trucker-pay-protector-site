@@ -1,0 +1,100 @@
+/* Trucker Pay Protector inner pages: Our story, Privacy, Terms, Delete account, Beta agreement, Email confirmed,
+   Page not found and the /account forward. One file so they all match the home page (assets/site.css): same colors,
+   same type, light and dark follow the phone's setting. Built 2026-11-11. */
+:root{
+  --bg:#FFFFFF; --bg2:#F7F5F8; --surface:#F7F5F8; --ink:#19151D; --muted:#4B4553; --line:#E4E0E8;
+  --accent:#6E2A78; --accent-ink:#FFFFFF; --accent-fill:#F3E6F5; --btn:#6E2A78; --btn-ink:#FFFFFF;
+  --flag:#A3321F; --flag-fill:#FBE6E1;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --bg:#0B080D; --bg2:#151018; --surface:#1B151F; --ink:#EEEAF1; --muted:#BDB5C4; --line:#2F2636;
+    --accent:#D7A8DE; --accent-ink:#140F17; --accent-fill:#3F1E46; --btn:#C68BCF; --btn-ink:#140F17;
+    --flag:#E8836F; --flag-fill:#3C1C16;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-inline:16px;padding-block:0 48px;font-size:16px;line-height:1.6;overflow-wrap:break-word}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+p,ul,ol{margin:0}
+a{color:var(--accent)}
+img{max-width:100%}
+strong{font-weight:700}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:10;background:var(--bg);color:var(--ink);padding:10px 14px;border-radius:8px;border:2px solid var(--accent)}
+.skip:focus{left:16px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* top bar: same logo size and link style as the home page */
+nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:4px 16px;flex-wrap:wrap;padding-block:12px 0}
+.brand{display:flex;align-items:center}
+.brand img{height:32px;width:auto;display:block}
+.navlinks{display:flex;gap:18px;font-size:15.5px}
+.navlinks a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:36px}
+.navlinks a:hover{color:var(--ink)}
+.navlinks a.login{font-weight:700;color:var(--ink)}
+
+header.page{display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line);padding-bottom:24px}
+h1{font-size:clamp(34px,6vw,48px);font-weight:800}
+h2{font-size:22px;font-weight:700;margin-top:4px}
+.meta{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.inshort{font-size:17px;line-height:1.5;margin-top:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+
+/* document pages */
+.doc{display:flex;flex-direction:column;gap:22px}
+.doc section{display:flex;flex-direction:column;gap:10px}
+.doc p{font-size:15.5px}
+.doc ul,.doc ol{padding-inline-start:22px;display:flex;flex-direction:column;gap:6px;font-size:15.5px}
+.short{background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:6px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.short p{font-size:15px}
+.note{background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--accent);border-radius:6px;padding:16px 18px;font-size:15px}
+.warn{background:var(--flag-fill);border:1px solid var(--flag);border-radius:6px;padding:14px 16px;font-size:14.5px;font-weight:700;color:var(--flag)}
+.fill{background:var(--flag-fill);color:var(--flag);padding:1px 6px;border-radius:4px;font-family:var(--mono);font-size:.92em}
+
+/* delete account form. 16px text in the box: iPhones zoom the page on anything smaller. */
+.narrow .wrap{max-width:680px}
+.emailbox{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.addr{font-weight:600}
+.emailbox input[type=email]{font:inherit;font-size:16px;padding:10px 12px;min-height:48px;border:1px solid var(--muted);border-radius:6px;background:var(--bg);color:var(--ink)}
+.emailbox button{font:inherit;font-weight:700;font-size:16px;padding:10px 18px;min-height:48px;border:none;border-radius:999px;background:var(--btn);color:var(--btn-ink);cursor:pointer;align-self:flex-start}
+.emailbox button:hover{filter:brightness(1.08)}
+.emailbox button:disabled{opacity:.6;cursor:default}
+
+/* our story */
+.fineprint{font-size:13px;color:var(--muted)}
+.story{display:flex;flex-direction:column;gap:20px}
+.story-photo{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block}
+.story-copy{display:flex;flex-direction:column;gap:14px}
+.story-copy h2{font-size:26px;font-weight:800}
+.story-copy p{font-size:16px;line-height:1.6}
+.byline{display:flex;align-items:center;gap:10px;padding-top:4px}
+.byline img{width:44px;height:44px;border-radius:50%;object-fit:cover;display:block}
+.byline span{font-family:var(--mono);font-size:13px;color:var(--muted)}
+
+/* short centered pages: email confirmed, page not found, the /account forward */
+html:has(body.center),body.center{height:100%}
+body.center{min-height:100%;display:flex;flex-direction:column;padding-block:0}
+.center .wrap{max-width:520px;gap:28px;flex:1;width:100%}
+.center nav{justify-content:center}
+.center main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding-block:32px}
+.center h1{font-size:clamp(28px,6vw,38px)}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:999px;background:var(--accent-fill);color:var(--accent);font-size:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:15px;color:var(--muted)}
+.card a{display:inline-block;padding-block:2px}
+.btn{display:inline-flex;align-items:center;font-weight:700;font-size:16.5px;padding:13px 22px;border-radius:999px;background:var(--btn);color:var(--btn-ink);text-decoration:none;min-height:48px}
+.btn:hover{filter:brightness(1.08)}
+.center footer{text-align:center}
+.center footer .row{justify-content:center}
+
+/* footer: same links and small print as the home page */
+footer{border-top:1px solid var(--line);padding-top:24px;padding-bottom:24px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:var(--muted)}
+footer .row{display:flex;gap:4px 20px;flex-wrap:wrap}
+footer a{color:var(--muted);display:inline-block;padding-block:3px}
+footer .tm{font-size:13px}

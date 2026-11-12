@@ -11,6 +11,9 @@ HERE = pathlib.Path(__file__).resolve().parent
 LANGS = ["en", "es", "pa", "ru", "ar"]
 PLAY_URL = "https://play.google.com/store/apps/details?id=com.truckerpayprotector.app"
 ACCOUNT_URL = "https://account.truckerpayprotector.com/"
+SITE = "https://truckerpayprotector.com"
+# The language tag share previews use (Open Graph "locale").
+OG_LOCALE = {"en": "en_US", "es": "es_US", "pa": "pa_IN", "ru": "ru_RU", "ar": "ar_AR"}
 
 PLAY_ICON = ('<svg aria-hidden="true" width="26" height="28" viewBox="0 0 26 28"><path d="M1 1l14 13L1 27z" fill="#34A853"/>'
              '<path d="M1 1l18 10-4 3z" fill="#4285F4"/><path d="M1 27l18-10-4-3z" fill="#EA4335"/>'
@@ -19,6 +22,19 @@ PLAY_ICON = ('<svg aria-hidden="true" width="26" height="28" viewBox="0 0 26 28"
 
 def path_for(code):
     return "/" if code == "en" else f"/{code}/"
+
+
+def json_ld(code, w):
+    """What search engines read about the company and the app. No prices here: they live in one place, the price cards."""
+    org = {"@type": "Organization", "@id": SITE + "/#company", "name": "Trucker Pay Protector LLC", "url": SITE + "/",
+           "logo": SITE + "/icon-512.png", "email": "support@truckerpayprotector.com"}
+    site = {"@type": "WebSite", "@id": SITE + "/#site", "name": "Trucker Pay Protector", "url": SITE + "/",
+            "inLanguage": LANGS, "publisher": {"@id": org["@id"]}}
+    app = {"@type": "MobileApplication", "name": "Trucker Pay Protector", "operatingSystem": "Android",
+           "applicationCategory": "BusinessApplication", "description": w["meta_desc"], "inLanguage": code,
+           "url": SITE + path_for(code), "installUrl": PLAY_URL, "publisher": {"@id": org["@id"]}}
+    text = json.dumps({"@context": "https://schema.org", "@graph": [org, site, app]}, ensure_ascii=False)
+    return text.replace("</", "<\\/")
 
 
 def build(code, all_words):
@@ -38,8 +54,14 @@ def build(code, all_words):
         + f'>{e(all_words[c]["lang_name"])}</a></li>'
         for c in LANGS
     )
-    rep["play_badge"] = (f'<a class="play" href="{PLAY_URL}" aria-label="{e(w["play_alt"])}">{PLAY_ICON}'
-                         f'<span lang="en" dir="ltr"><small>{e(w["play_small"])}</small><b>Google Play</b></span></a>')
+    # No aria-label: a screen reader says the words on the badge, so what is heard matches what is seen.
+    rep["play_badge"] = (f'<a class="play" href="{PLAY_URL}">{PLAY_ICON}'
+                         f'<span><small>{e(w["play_small"])}</small> <b lang="en" dir="ltr">Google Play</b></span></a>')
+    rep["og_locale"] = "\n".join(
+        [f'<meta property="og:locale" content="{OG_LOCALE[code]}">']
+        + [f'<meta property="og:locale:alternate" content="{OG_LOCALE[c]}">' for c in LANGS if c != code]
+    )
+    rep["json_ld"] = json_ld(code, w)
     rep["chips"] = "".join(f"<li>{e(c)}</li>" for c in w["chips"])
     # FAQ answers may hold the two site links; those are written by us, so they are not escaped.
     rep["faq"] = "".join(f"<details><summary>{e(q)}</summary><p>{a}</p></details>" for q, a in w["faq"])
