@@ -32,6 +32,7 @@
   "phone_note": "Made-up numbers to show how it works.",
   "how_kicker": "How it works",
   "how_h": "Four easy steps.",
+  "how_ai": "AI reads your papers. You check each rule before the app uses it.",
   "s1_h": "Add your papers",
   "s1_p": "Show the app your pay papers and one recent paystub.",
   "s2_h": "Say yes to your plan",
@@ -99,13 +100,13 @@
   "founding_badge": "Founding price",
   "p1_found": "On our waitlist? Pay $6.99 a month or $55.99 a year.",
   "p2_found": "On our waitlist? Pay $13.99 a month or $111.99 a year.",
-  "price_note": "30-day free trial on both. To get the founding price, start within 60 days after launch. Starting your free trial counts as starting. You keep the price as long as you stay subscribed with no break. Prices are in US dollars, paid through Google Play.",
+  "price_note": "30-day free trial on both. To get the founding price, start within 60 days after launch. Starting your free trial counts as starting. Founding price stays the same for as long as your subscription stays active. If it runs out for more than 60 days, you come back at the regular price. Prices here are in US dollars. In Canada and Mexico, Google Play shows your price in your own money before you buy.",
   "faq_kicker": "Questions",
   "faq_h": "Good to know",
   "faq": [
     [
       "Is this legal, tax or payroll advice?",
-      "No. The app shows what your papers say and what your paystub says. If something looks very wrong, talk to your payroll office, your state labor office or a lawyer."
+      "No. The app shows what your papers say and what your paystub says. If something looks very wrong, talk to your payroll office, the labor office where you work, or a lawyer."
     ],
     [
       "Does it promise I get money back?",

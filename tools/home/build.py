@@ -65,6 +65,7 @@ def build(code, all_words):
     rep["chips"] = "".join(f"<li>{e(c)}</li>" for c in w["chips"])
     # FAQ answers may hold the two site links; those are written by us, so they are not escaped.
     rep["faq"] = "".join(f"<details><summary>{e(q)}</summary><p>{a}</p></details>" for q, a in w["faq"])
+    rep["how_ai_html"] = f"<p>{e(w['how_ai'])}</p>" if w.get("how_ai") else ""
     rep["legal_note_html"] = f"<p>{e(w['legal_note'])}</p>" if w.get("legal_note") else ""
     for k, v in rep.items():
         t = t.replace("{{" + k + "}}", v)

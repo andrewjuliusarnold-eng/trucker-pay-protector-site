@@ -32,6 +32,7 @@
   "phone_note": "Números de ejemplo para mostrar cómo funciona.",
   "how_kicker": "Cómo funciona",
   "how_h": "Cuatro pasos fáciles.",
+  "how_ai": "",
   "s1_h": "Agregue sus papeles",
   "s1_p": "Muéstrele a la app sus papeles de pago y un talón de pago reciente.",
   "s2_h": "Diga sí a su plan",
@@ -143,7 +144,7 @@
   "foot_terms": "Términos de servicio",
   "foot_delete": "Borrar su cuenta",
   "foot_help": "Ayuda",
-  "legal_note": "Las páginas legales están en inglés; el texto en inglés es el que vale. Los Términos incluyen un acuerdo de arbitraje.",
+  "legal_note": "Las páginas legales están en inglés. Si vive en Canadá o en México, la sección 18A de los Términos le da más derechos.",
   "tm_line": "Google Play y el logo de Google Play son marcas de Google LLC. iPhone es una marca de Apple Inc.",
   "skip": "Ir a la parte principal"
 }
