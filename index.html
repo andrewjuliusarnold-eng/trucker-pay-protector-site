@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Trucker Pay Protector: Check every paycheck against your own pay plan</title>
 <meta name="description" content="An Android app that checks each paystub or settlement against your own pay papers. For company drivers and owner-operators. Built by a working long-haul truck driver.">
@@ -87,8 +87,14 @@
 </header>
 
 <main id="main">
+<section class="video" aria-labelledby="video-h"><div class="in">
+  <p class="kicker">See it work</p><h2 id="video-h">Watch one paycheck get checked.</h2>
+  <div class="vframe"><video controls playsinline muted preload="none" width="1920" height="1080" poster="/assets/video/use-case-en.jpg" aria-labelledby="video-h"><source src="/assets/video/use-case-en.mp4" type="video/mp4"></video></div>
+  <p class="vnote">About 50 seconds. A made-up driver, made-up numbers and an AI voice. Use the app only when you&#x27;re safely stopped, never while driving.</p>
+  <p class="vnote"><span class="tag">Paid plan</span></p>
+</div></section>
 
-<section id="how" class="fade"><div class="in">
+<section id="how"><div class="in">
   <p class="kicker">How it works</p><h2>Four easy steps.</h2>
   <ol class="steps">
     <li><span class="n" aria-hidden="true">1</span><h3>Add your papers</h3><p>Show the app your pay papers and one recent paystub.</p></li>
