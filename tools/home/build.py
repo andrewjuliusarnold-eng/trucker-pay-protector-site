@@ -3,8 +3,12 @@
 
 Run from the repo root:  python3 tools/home/build.py
 Writes index.html (English) and es/, pa/, ru/, ar/ index.html. Change words in the .json files, not the .html.
+
+The use case video: the "See it work" part is left out of a language's page until that language has its own
+video file, assets/video/use-case-<lang>.mp4, and its still picture, assets/video/use-case-<lang>.jpg. The words
+are burned into the video, so each language needs its own file. No file, no video part, no empty box.
 """
-import html, json, pathlib
+import html, json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 HERE = pathlib.Path(__file__).resolve().parent
@@ -18,6 +22,23 @@ OG_LOCALE = {"en": "en_US", "es": "es_US", "pa": "pa_IN", "ru": "ru_RU", "ar": "
 PLAY_ICON = ('<svg aria-hidden="true" width="26" height="28" viewBox="0 0 26 28"><path d="M1 1l14 13L1 27z" fill="#34A853"/>'
              '<path d="M1 1l18 10-4 3z" fill="#4285F4"/><path d="M1 27l18-10-4-3z" fill="#EA4335"/>'
              '<path d="M19 11l5 3-5 3-4-3z" fill="#FBBC04"/></svg>')
+
+
+def video_section(code, w, e):
+    """The "See it work" part, or nothing when this language has no video file yet."""
+    mp4 = ROOT / "assets" / "video" / f"use-case-{code}.mp4"
+    poster = ROOT / "assets" / "video" / f"use-case-{code}.jpg"
+    if not (mp4.exists() and poster.exists()):
+        return ""
+    return (
+        '<section class="video" aria-labelledby="video-h"><div class="in">\n'
+        f'  <p class="kicker">{e(w["video_kicker"])}</p><h2 id="video-h">{e(w["video_h"])}</h2>\n'
+        f'  <div class="vframe"><video controls playsinline muted preload="none" width="1920" height="1080" '
+        f'poster="/assets/video/use-case-{code}.jpg" aria-labelledby="video-h">'
+        f'<source src="/assets/video/use-case-{code}.mp4" type="video/mp4"></video></div>\n'
+        f'  <p class="vnote">{e(w["video_note"])}</p>\n'
+        '</div></section>\n'
+    )
 
 
 def path_for(code):
@@ -42,6 +63,8 @@ def build(code, all_words):
     t = (HERE / "template.html").read_text(encoding="utf-8")
     e = lambda s: html.escape(s, quote=True)
     rep = {k: e(v) for k, v in w.items() if isinstance(v, str)}
+    # A word with a hyphen in it ("Made-up") stays on one line in this heading.
+    rep["inside_h"] = re.sub(r"(\w+-\w+)", r'<span class="nb">\1</span>', rep["inside_h"])
     rep["path"] = path_for(code)
     rep["home"] = path_for(code)
     rep["account_url"] = ACCOUNT_URL
@@ -65,6 +88,11 @@ def build(code, all_words):
     rep["chips"] = "".join(f"<li>{e(c)}</li>" for c in w["chips"])
     # FAQ answers may hold the two site links; those are written by us, so they are not escaped.
     rep["faq"] = "".join(f"<details><summary>{e(q)}</summary><p>{a}</p></details>" for q, a in w["faq"])
+    video = video_section(code, w, e)
+    rep["video_section"] = video
+    # With no video the first part after the top fades out of the plum glow on its own.
+    rep["how_class"] = "" if video else ' class="fade"'
+    rep["csp_media"] = " media-src 'self';" if video else ""
     rep["legal_note_html"] = f"<p>{e(w['legal_note'])}</p>" if w.get("legal_note") else ""
     for k, v in rep.items():
         t = t.replace("{{" + k + "}}", v)

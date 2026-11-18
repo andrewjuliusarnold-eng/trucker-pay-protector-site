@@ -13,8 +13,8 @@
 <link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/">
 <link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/">
 <link rel="alternate" hreflang="x-default" href="https://truckerpayprotector.com/">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B080D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <meta property="og:site_name" content="Trucker Pay Protector">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_US">
@@ -41,8 +41,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=2026-11-11">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=2026-11-18">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://truckerpayprotector.com/#company", "name": "Trucker Pay Protector LLC", "url": "https://truckerpayprotector.com/", "logo": "https://truckerpayprotector.com/icon-512.png", "email": "support@truckerpayprotector.com"}, {"@type": "WebSite", "@id": "https://truckerpayprotector.com/#site", "name": "Trucker Pay Protector", "url": "https://truckerpayprotector.com/", "inLanguage": ["en", "es", "pa", "ru", "ar"], "publisher": {"@id": "https://truckerpayprotector.com/#company"}}, {"@type": "MobileApplication", "name": "Trucker Pay Protector", "operatingSystem": "Android", "applicationCategory": "BusinessApplication", "description": "An Android app that checks each paystub or settlement against your own pay papers. For company drivers and owner-operators. Built by a working long-haul truck driver.", "inLanguage": "en", "url": "https://truckerpayprotector.com/", "installUrl": "https://play.google.com/store/apps/details?id=com.truckerpayprotector.app", "publisher": {"@id": "https://truckerpayprotector.com/#company"}}]}</script>
 </head>
 <body>
@@ -51,10 +51,7 @@
   <div class="in">
     <nav aria-label="Main">
       <a class="brand" href="/" aria-label="Trucker Pay Protector">
-        <picture>
-          <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
-          <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector" width="98" height="32">
-        </picture>
+        <img src="/assets/lockup-night.svg" alt="Trucker Pay Protector" width="110" height="36">
       </a>
       <div class="links">
         <a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a><a href="/about/">Our story</a>
@@ -77,100 +74,111 @@
             <span><b>iPhone</b><small>Coming soon</small></span>
           </div>
         </div>
-        <p class="trial">30-day free trial. Cancel any time in Google Play.</p>
+        <p class="trial">30-day free trial. Cancel any time in your app store.</p>
       </div>
-      <figure class="phone" aria-label="Paycheck check">
-        <div class="screen">
-          <div class="shead"><small>WEEK OF OCT 26</small><b>Paycheck check</b></div>
-          <div class="card"><div class="sumtop"><span>Lines that match</span><span class="big" dir="ltr">11/12</span></div></div>
-          <div class="card look"><b>1 line to look at</b><div>Detention, Tuesday, stop 2</div><div class="row2"><span>Your plan: <bdi>$45.00</bdi></span><span>Stub: <bdi>$0.00</bdi></span></div></div>
-          <div class="card">
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Miles 2,140</span><bdi>$1,326.80</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Stop pay 9</span><bdi>$225.00</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Layover 1</span><bdi>$80.00</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Insurance</span><bdi>−$42.10</bdi></div>
-          </div>
-        </div>
-        <figcaption>Made-up numbers to show how it works.</figcaption>
+      <figure class="shot heroshot">
+        <div class="bezel"><img src="/assets/app/check-night.webp" alt="The app&#x27;s Paycheck review screen. One line does not match: hourly and delay pay, $49.88." width="540" height="1145" fetchpriority="high"></div>
+        <figcaption>Made-up numbers to show how it works. <span class="tag">Paid plan</span></figcaption>
       </figure>
     </div>
   </div>
 </header>
 
 <main id="main">
-<section id="how"><div class="in">
+
+<section id="how" class="fade"><div class="in">
   <p class="kicker">How it works</p><h2>Four easy steps.</h2>
   <ol class="steps">
-    <li class="tile"><span class="n">1</span><h3>Add your papers</h3><p>Show the app your pay papers and one recent paystub.</p></li>
-    <li class="tile"><span class="n">2</span><h3>Say yes to your plan</h3><p>The app writes down your pay rules. You check each one.</p></li>
-    <li class="tile"><span class="n">3</span><h3>Log your day</h3><p>Tap once for each stop, wait or event.</p></li>
-    <li class="tile"><span class="n">4</span><h3>Check your pay</h3><p>The app checks each line. It shows any line that does not match, and why.</p></li>
+    <li><span class="n" aria-hidden="true">1</span><h3>Add your papers</h3><p>Show the app your pay papers and one recent paystub.</p></li>
+    <li><span class="n" aria-hidden="true">2</span><h3>Say yes to your plan</h3><p>The app writes down your pay rules. You check each one.</p></li>
+    <li><span class="n" aria-hidden="true">3</span><h3>Log your day</h3><p>Tap once for each stop, wait or event.</p></li>
+    <li><span class="n" aria-hidden="true">4</span><h3>Check your pay</h3><p>The app checks each line. It shows any line that does not match, and why.</p></li>
   </ol>
 </div></section>
 
 <section class="alt"><div class="in">
-  <p class="kicker">What it checks</p><h2>The small lines add up.</h2>
-  <ul class="chips"><li>Miles and rate per mile</li><li>Stop and activity pay</li><li>Detention and delay</li><li>Hourly and overtime</li><li>Percent of load</li><li>Layover and breakdown</li><li>Deductions and escrow</li><li>Fuel and advances</li></ul>
-  <div class="three">
-    <div class="tile"><h3>Company drivers</h3><p>Paid by the mile, the hour or the stop.</p></div>
-    <div class="tile"><h3>Leased owner-operators</h3><p>Your settlement checked against your lease.</p></div>
-    <div class="tile"><h3>Own authority</h3><p>Each rate sheet checked against what you got.</p></div>
+  <p class="kicker">Inside the app</p><h2>The real app. <span class="nb">Made-up</span> numbers.</h2>
+  <div class="shots">
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/today-night.webp" alt="The app&#x27;s Today screen with one big Leave stop button and today&#x27;s pay so far." width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>Log your day in one tap.</b><span>Each stop, wait and load, timed as you go.</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/why-night.webp" alt="The app&#x27;s Why screen. It shows the math for one pay line and the words from the pay plan." width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>Tap &quot;Why?&quot; on a line.</b><span>See the math, and the line on your papers when you add them.</span><span class="tag">Paid plan</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/note-night.webp" alt="The app&#x27;s Correction request screen with a note to payroll ready to send." width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>A polite note, ready to send.</b><span>You read it. You send it.</span><span class="tag">Paid plan</span></figcaption>
+    </figure>
   </div>
 </div></section>
 
-<section><div class="in split">
-  <div><p class="kicker">Gets better with time</p><h2>The longer you use it, the more it shows you.</h2><p class="sub">Each week you log adds to your record. You can look back at any week and see your pay add up over the year.</p></div>
-  <ol class="stack">
-    <li class="tile"><h3>Week 1</h3><p>It learns your pay rules from your papers.</p></li>
-    <li class="tile"><h3>Week 2</h3><p>It shows how this week compares with the week before.</p></li>
-    <li class="tile"><h3>Every payday</h3><p>Add your paycheck. The app checks it line by line against your own log.</p></li>
-  </ol>
+<section><div class="in">
+  <p class="kicker">What it checks</p><h2>The small lines add up.</h2>
+  <ul class="chips"><li>Miles and rate per mile</li><li>Stop and activity pay</li><li>Detention and delay</li><li>Hourly and overtime</li><li>Percent of load</li><li>Layover and breakdown</li><li>Deductions and escrow</li><li>Fuel and advances</li></ul>
+  <div class="three">
+    <div><h3>Company drivers</h3><p>Paid by the mile, the hour or the stop.</p></div>
+    <div><h3>Leased owner-operators</h3><p>Your settlement checked against your lease.</p></div>
+    <div><h3>Own authority</h3><p>Each rate sheet checked against what you got.</p></div>
+  </div>
 </div></section>
 
 <section class="alt"><div class="in split">
-  <div><p class="kicker">Your account on the web</p><h2>Use a big screen at home.</h2><p class="sub">Sign in on a computer with the same account. See all your weeks. Make a report you can send. Print a year-end summary.</p>
-    <a class="btn" href="https://account.truckerpayprotector.com/">Log in to your account</a></div>
-  <div class="web" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div>
-    <table><tr><th>Week</th><th>Lines</th><th class="n">Stub</th><th class="n">Plan</th></tr>
-    <tr><td>10/26</td><td>1 to look at</td><td class="n">$2,184.60</td><td class="n">$2,229.60</td></tr>
-    <tr><td>10/19</td><td>All match</td><td class="n">$2,041.15</td><td class="n">$2,041.15</td></tr>
-    <tr><td>10/12</td><td>All match</td><td class="n">$1,977.40</td><td class="n">$1,977.40</td></tr>
-    <tr><td>10/5</td><td>All match</td><td class="n">$2,310.95</td><td class="n">$2,310.95</td></tr></table></div>
+  <div><p class="kicker">Gets better with time</p><h2>The longer you use it, the more it shows you.</h2><p class="sub">Each week you log adds to your record. You can look back at any week and see your pay add up over the year.</p></div>
+  <ol class="weeks">
+    <li><h3>Week 1</h3><p>It learns your pay rules from your papers.</p></li>
+    <li><h3>Week 2</h3><p>It shows how this week compares with the week before.</p></li>
+    <li><h3>Every payday</h3><p>Add your paycheck. The app checks it line by line against your own log.</p></li>
+  </ol>
 </div></section>
 
 <section><div class="in split">
+  <div><p class="kicker">Your account on the web</p><h2>Use a big screen at home.</h2><p class="sub">Sign in on a computer with the same account. See all your weeks. Make a report you can send. Print a year-end summary.</p>
+    <a class="btn" href="https://account.truckerpayprotector.com/">Log in to your account</a></div>
+  <div class="web"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="webin"><p><span class="tag">Paid plan</span></p>
+    <table aria-hidden="true"><tr><th>Week</th><th>Lines</th><th class="n">Stub</th><th class="n">Plan</th></tr>
+    <tr><td>10/26</td><td class="look">1 to look at</td><td class="n">$2,184.60</td><td class="n">$2,229.60</td></tr>
+    <tr><td>10/19</td><td class="ok">All match</td><td class="n">$2,041.15</td><td class="n">$2,041.15</td></tr>
+    <tr><td>10/12</td><td class="ok">All match</td><td class="n">$1,977.40</td><td class="n">$1,977.40</td></tr>
+    <tr><td>10/5</td><td class="ok">All match</td><td class="n">$2,310.95</td><td class="n">$2,310.95</td></tr></table></div></div>
+</div></section>
+
+<section class="alt"><div class="in split">
   <div><p class="kicker">Your pay stays yours</p><h2>Your pay is private.</h2>
     <ul class="promise"><li>No ads. We never sell your info.</li><li>We never contact your employer or carrier.</li><li>Delete your account any time.</li><li>Use it in English, Español, ਪੰਜਾਬੀ, Русский or العربية.</li></ul></div>
   <div class="tile"><h3>Not legal or payroll advice</h3><p>The app shows you where your papers and your paystub do not match. What you do next is up to you.</p></div>
 </div></section>
 
-<section id="pricing" class="alt"><div class="in">
-  <p class="kicker">Pricing</p><h2>Pick the plan for how you drive.</h2>
+<section id="pricing"><div class="in">
+  <p class="kicker">Prices at launch</p><h2>Pick the plan for how you drive.</h2>
   <div class="prices">
-    <div class="tile price"><h3>Company driver</h3><p>One pay plan, one truck.</p><div class="amt"><bdi>$9.99</bdi> <small>/ month</small></div><p>or $79.99 a year</p><p class="found"><span class="badge">Founding price</span> On our waitlist? Pay $6.99 a month or $55.99 a year.</p></div>
-    <div class="tile price"><h3>Owner-operator</h3><p>Leased or your own authority.</p><div class="amt"><bdi>$19.99</bdi> <small>/ month</small></div><p>or $159.99 a year</p><p class="found"><span class="badge">Founding price</span> On our waitlist? Pay $13.99 a month or $111.99 a year.</p></div>
+    <div class="tile price"><h3>Company driver</h3><p>One pay plan, one truck.</p><div class="amt"><bdi>$9.99</bdi> <small>/ month</small></div><p>or $79.99 a year</p><p class="found"><span class="tag">Founding price</span> On our waitlist? Pay $6.99 a month or $55.99 a year.</p></div>
+    <div class="tile price"><h3>Owner-operator</h3><p>Leased or your own authority.</p><div class="amt"><bdi>$19.99</bdi> <small>/ month</small></div><p>or $159.99 a year</p><p class="found"><span class="tag">Founding price</span> On our waitlist? Pay $13.99 a month or $111.99 a year.</p></div>
   </div>
-  <p class="note">30-day free trial on both. To get the founding price, start within 60 days after launch. Starting your free trial counts as starting. You keep the price as long as you stay subscribed with no break. Prices are in US dollars, paid through Google Play.</p>
+  <p class="note">30-day free trial on both. To get the founding price, start within 60 days after launch. Starting your free trial counts as starting. Your founding price stays as long as your subscription stays active. If you cancel and it runs out, you come back at the regular price. Prices are in US dollars, paid through your app store.</p>
 </div></section>
 
-<section id="faq"><div class="in">
+<section id="faq" class="alt"><div class="in">
   <p class="kicker">Questions</p><h2>Good to know</h2>
   <div class="faq"><details><summary>Is this legal, tax or payroll advice?</summary><p>No. The app shows what your papers say and what your paystub says. If something looks very wrong, talk to your payroll office, your state labor office or a lawyer.</p></details><details><summary>Does it promise I get money back?</summary><p>No. It shows you which lines do not match, and where each number came from. It does not file anything or call anyone for you.</p></details><details><summary>Will my employer or carrier know I use it?</summary><p>Not from us. We never contact your employer, your carrier or their payroll company. We only share what you choose to send.</p></details><details><summary>Is there an iPhone app?</summary><p>Not yet. Right now the app is for Android phones. The iPhone app is coming soon.</p></details><details><summary>Who is it for?</summary><p>Company drivers and owner-operators, leased or with their own authority. The app asks which one you are when you set it up.</p></details><details><summary>Is my info sold or used for ads?</summary><p>No. We do not sell your info, show ads or use your pay to build ad profiles. Read more in our <a href="/privacy/">Privacy Policy</a>.</p></details><details><summary>How do I delete my account?</summary><p>You can delete it in the app. You can also use our <a href="/delete-account/">delete account page</a>.</p></details><details><summary>How do I get help?</summary><p>Email us at <a href="mailto:support@truckerpayprotector.com">support@truckerpayprotector.com</a>.</p></details></div>
 </div></section>
 
-<section class="alt cta"><div class="in">
+<section class="cta"><div class="in">
   <h2>Check your next paycheck.</h2>
   <div class="stores"><a class="play" href="https://play.google.com/store/apps/details?id=com.truckerpayprotector.app"><svg aria-hidden="true" width="26" height="28" viewBox="0 0 26 28"><path d="M1 1l14 13L1 27z" fill="#34A853"/><path d="M1 1l18 10-4 3z" fill="#4285F4"/><path d="M1 27l18-10-4-3z" fill="#EA4335"/><path d="M19 11l5 3-5 3-4-3z" fill="#FBBC04"/></svg><span><small>GET IT ON</small> <b lang="en" dir="ltr">Google Play</b></span></a></div>
 </div></section>
 </main>
 
 <footer><div class="in">
+  <img class="footlogo" src="/assets/lockup-night.svg" alt="" width="92" height="30" loading="lazy">
   <p>Trucker Pay Protector checks your pay against your own papers. It is not legal, tax or payroll advice. Your employer&#x27;s or broker&#x27;s records are the official ones.</p>
   
   <p class="row"><a href="/about/">Our story</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a><a href="/delete-account/">Delete your account</a><a href="mailto:support@truckerpayprotector.com">Get help</a></p>
   <p class="tm">Google Play and the Google Play logo are trademarks of Google LLC. iPhone is a trademark of Apple Inc.</p>
   <p class="tm">© 2026 Trucker Pay Protector LLC</p>
 </div></footer>
-<script src="/assets/site.js?v=2026-11-11" defer></script>
+<script src="/assets/site.js?v=2026-11-18" defer></script>
 </body>
 </html>

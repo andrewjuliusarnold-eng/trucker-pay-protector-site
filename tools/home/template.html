@@ -2,14 +2,14 @@
 <html lang="{{lang}}" dir="{{dir}}">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;{{csp_media}} manifest-src 'self'; script-src 'self'; base-uri 'none'; form-action https://us-central1-trucker-pay-protect.cloudfunctions.net">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{{title}}</title>
 <meta name="description" content="{{meta_desc}}">
 <link rel="canonical" href="https://truckerpayprotector.com{{path}}">
 {{hreflang}}
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B080D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <meta property="og:site_name" content="Trucker Pay Protector">
 {{og_locale}}
 <meta property="og:title" content="{{title}}">
@@ -32,8 +32,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=2026-11-11">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=2026-11-18">
 <script type="application/ld+json">{{json_ld}}</script>
 </head>
 <body>
@@ -42,10 +42,7 @@
   <div class="in">
     <nav aria-label="Main">
       <a class="brand" href="{{home}}" aria-label="Trucker Pay Protector">
-        <picture>
-          <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
-          <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector" width="98" height="32">
-        </picture>
+        <img src="/assets/lockup-night.svg" alt="Trucker Pay Protector" width="110" height="36">
       </a>
       <div class="links">
         <a href="#how">{{nav_how}}</a><a href="#pricing">{{nav_pricing}}</a><a href="#faq">{{nav_faq}}</a><a href="/about/">{{nav_story}}</a>
@@ -70,98 +67,109 @@
         </div>
         <p class="trial">{{trial_line}}</p>
       </div>
-      <figure class="phone" aria-label="{{phone_title}}">
-        <div class="screen">
-          <div class="shead"><small>{{phone_week}}</small><b>{{phone_title}}</b></div>
-          <div class="card"><div class="sumtop"><span>{{phone_match}}</span><span class="big" dir="ltr">11/12</span></div></div>
-          <div class="card look"><b>{{phone_look}}</b><div>{{phone_look_what}}</div><div class="row2"><span>{{phone_plan}}: <bdi>$45.00</bdi></span><span>{{phone_stub}}: <bdi>$0.00</bdi></span></div></div>
-          <div class="card">
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>{{phone_l1}}</span><bdi>$1,326.80</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>{{phone_l2}}</span><bdi>$225.00</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>{{phone_l3}}</span><bdi>$80.00</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>{{phone_l4}}</span><bdi>−$42.10</bdi></div>
-          </div>
-        </div>
-        <figcaption>{{phone_note}}</figcaption>
+      <figure class="shot heroshot">
+        <div class="bezel"><img src="/assets/app/check-night.webp" alt="{{shot_hero_alt}}" width="540" height="1145" fetchpriority="high"></div>
+        <figcaption>{{phone_note}} <span class="tag">{{paid_tag}}</span></figcaption>
       </figure>
     </div>
   </div>
 </header>
 
 <main id="main">
-<section id="how"><div class="in">
+{{video_section}}
+<section id="how"{{how_class}}><div class="in">
   <p class="kicker">{{how_kicker}}</p><h2>{{how_h}}</h2>
   <ol class="steps">
-    <li class="tile"><span class="n">1</span><h3>{{s1_h}}</h3><p>{{s1_p}}</p></li>
-    <li class="tile"><span class="n">2</span><h3>{{s2_h}}</h3><p>{{s2_p}}</p></li>
-    <li class="tile"><span class="n">3</span><h3>{{s3_h}}</h3><p>{{s3_p}}</p></li>
-    <li class="tile"><span class="n">4</span><h3>{{s4_h}}</h3><p>{{s4_p}}</p></li>
+    <li><span class="n" aria-hidden="true">1</span><h3>{{s1_h}}</h3><p>{{s1_p}}</p></li>
+    <li><span class="n" aria-hidden="true">2</span><h3>{{s2_h}}</h3><p>{{s2_p}}</p></li>
+    <li><span class="n" aria-hidden="true">3</span><h3>{{s3_h}}</h3><p>{{s3_p}}</p></li>
+    <li><span class="n" aria-hidden="true">4</span><h3>{{s4_h}}</h3><p>{{s4_p}}</p></li>
   </ol>
 </div></section>
 
 <section class="alt"><div class="in">
-  <p class="kicker">{{what_kicker}}</p><h2>{{what_h}}</h2>
-  <ul class="chips">{{chips}}</ul>
-  <div class="three">
-    <div class="tile"><h3>{{who1_h}}</h3><p>{{who1_p}}</p></div>
-    <div class="tile"><h3>{{who2_h}}</h3><p>{{who2_p}}</p></div>
-    <div class="tile"><h3>{{who3_h}}</h3><p>{{who3_p}}</p></div>
+  <p class="kicker">{{inside_kicker}}</p><h2>{{inside_h}}</h2>
+  <div class="shots">
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/today-night.webp" alt="{{shot1_alt}}" width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>{{shot1_h}}</b><span>{{shot1_p}}</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/why-night.webp" alt="{{shot2_alt}}" width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>{{shot2_h}}</b><span>{{shot2_p}}</span><span class="tag">{{paid_tag}}</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/note-night.webp" alt="{{shot3_alt}}" width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>{{shot3_h}}</b><span>{{shot3_p}}</span><span class="tag">{{paid_tag}}</span></figcaption>
+    </figure>
   </div>
 </div></section>
 
-<section><div class="in split">
-  <div><p class="kicker">{{better_kicker}}</p><h2>{{better_h}}</h2><p class="sub">{{better_p}}</p></div>
-  <ol class="stack">
-    <li class="tile"><h3>{{b1_h}}</h3><p>{{b1_p}}</p></li>
-    <li class="tile"><h3>{{b2_h}}</h3><p>{{b2_p}}</p></li>
-    <li class="tile"><h3>{{b3_h}}</h3><p>{{b3_p}}</p></li>
-  </ol>
+<section><div class="in">
+  <p class="kicker">{{what_kicker}}</p><h2>{{what_h}}</h2>
+  <ul class="chips">{{chips}}</ul>
+  <div class="three">
+    <div><h3>{{who1_h}}</h3><p>{{who1_p}}</p></div>
+    <div><h3>{{who2_h}}</h3><p>{{who2_p}}</p></div>
+    <div><h3>{{who3_h}}</h3><p>{{who3_p}}</p></div>
+  </div>
 </div></section>
 
 <section class="alt"><div class="in split">
-  <div><p class="kicker">{{web_kicker}}</p><h2>{{web_h}}</h2><p class="sub">{{web_p}}</p>
-    <a class="btn" href="{{account_url}}">{{web_btn}}</a></div>
-  <div class="web" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div>
-    <table><tr><th>{{web_week}}</th><th>{{web_lines}}</th><th class="n">{{web_stub}}</th><th class="n">{{web_plan}}</th></tr>
-    <tr><td>10/26</td><td>{{web_look}}</td><td class="n">$2,184.60</td><td class="n">$2,229.60</td></tr>
-    <tr><td>10/19</td><td>{{web_ok}}</td><td class="n">$2,041.15</td><td class="n">$2,041.15</td></tr>
-    <tr><td>10/12</td><td>{{web_ok}}</td><td class="n">$1,977.40</td><td class="n">$1,977.40</td></tr>
-    <tr><td>10/5</td><td>{{web_ok}}</td><td class="n">$2,310.95</td><td class="n">$2,310.95</td></tr></table></div>
+  <div><p class="kicker">{{better_kicker}}</p><h2>{{better_h}}</h2><p class="sub">{{better_p}}</p></div>
+  <ol class="weeks">
+    <li><h3>{{b1_h}}</h3><p>{{b1_p}}</p></li>
+    <li><h3>{{b2_h}}</h3><p>{{b2_p}}</p></li>
+    <li><h3>{{b3_h}}</h3><p>{{b3_p}}</p></li>
+  </ol>
 </div></section>
 
 <section><div class="in split">
+  <div><p class="kicker">{{web_kicker}}</p><h2>{{web_h}}</h2><p class="sub">{{web_p}}</p>
+    <a class="btn" href="{{account_url}}">{{web_btn}}</a></div>
+  <div class="web"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="webin"><p><span class="tag">{{paid_tag}}</span></p>
+    <table aria-hidden="true"><tr><th>{{web_week}}</th><th>{{web_lines}}</th><th class="n">{{web_stub}}</th><th class="n">{{web_plan}}</th></tr>
+    <tr><td>10/26</td><td class="look">{{web_look}}</td><td class="n">$2,184.60</td><td class="n">$2,229.60</td></tr>
+    <tr><td>10/19</td><td class="ok">{{web_ok}}</td><td class="n">$2,041.15</td><td class="n">$2,041.15</td></tr>
+    <tr><td>10/12</td><td class="ok">{{web_ok}}</td><td class="n">$1,977.40</td><td class="n">$1,977.40</td></tr>
+    <tr><td>10/5</td><td class="ok">{{web_ok}}</td><td class="n">$2,310.95</td><td class="n">$2,310.95</td></tr></table></div></div>
+</div></section>
+
+<section class="alt"><div class="in split">
   <div><p class="kicker">{{priv_kicker}}</p><h2>{{priv_h}}</h2>
     <ul class="promise"><li>{{priv_1}}</li><li>{{priv_2}}</li><li>{{priv_3}}</li><li>{{priv_4}}</li></ul></div>
   <div class="tile"><h3>{{advice_h}}</h3><p>{{advice_p}}</p></div>
 </div></section>
 
-<section id="pricing" class="alt"><div class="in">
+<section id="pricing"><div class="in">
   <p class="kicker">{{price_kicker}}</p><h2>{{price_h}}</h2>
   <div class="prices">
-    <div class="tile price"><h3>{{p1_h}}</h3><p>{{p1_sub}}</p><div class="amt"><bdi>{{p1_amt}}</bdi> <small>{{per_month}}</small></div><p>{{p1_year}}</p><p class="found"><span class="badge">{{founding_badge}}</span> {{p1_found}}</p></div>
-    <div class="tile price"><h3>{{p2_h}}</h3><p>{{p2_sub}}</p><div class="amt"><bdi>{{p2_amt}}</bdi> <small>{{per_month}}</small></div><p>{{p2_year}}</p><p class="found"><span class="badge">{{founding_badge}}</span> {{p2_found}}</p></div>
+    <div class="tile price"><h3>{{p1_h}}</h3><p>{{p1_sub}}</p><div class="amt"><bdi>{{p1_amt}}</bdi> <small>{{per_month}}</small></div><p>{{p1_year}}</p><p class="found"><span class="tag">{{founding_badge}}</span> {{p1_found}}</p></div>
+    <div class="tile price"><h3>{{p2_h}}</h3><p>{{p2_sub}}</p><div class="amt"><bdi>{{p2_amt}}</bdi> <small>{{per_month}}</small></div><p>{{p2_year}}</p><p class="found"><span class="tag">{{founding_badge}}</span> {{p2_found}}</p></div>
   </div>
   <p class="note">{{price_note}}</p>
 </div></section>
 
-<section id="faq"><div class="in">
+<section id="faq" class="alt"><div class="in">
   <p class="kicker">{{faq_kicker}}</p><h2>{{faq_h}}</h2>
   <div class="faq">{{faq}}</div>
 </div></section>
 
-<section class="alt cta"><div class="in">
+<section class="cta"><div class="in">
   <h2>{{cta_h}}</h2>
   <div class="stores">{{play_badge}}</div>
 </div></section>
 </main>
 
 <footer><div class="in">
+  <img class="footlogo" src="/assets/lockup-night.svg" alt="" width="92" height="30" loading="lazy">
   <p>{{foot_line}}</p>
   {{legal_note_html}}
   <p class="row"><a href="/about/">{{foot_story}}</a><a href="/privacy/">{{foot_privacy}}</a><a href="/terms/">{{foot_terms}}</a><a href="/delete-account/">{{foot_delete}}</a><a href="mailto:support@truckerpayprotector.com">{{foot_help}}</a></p>
   <p class="tm">{{tm_line}}</p>
   <p class="tm">© 2026 Trucker Pay Protector LLC</p>
 </div></footer>
-<script src="/assets/site.js?v=2026-11-11" defer></script>
+<script src="/assets/site.js?v=2026-11-18" defer></script>
 </body>
 </html>

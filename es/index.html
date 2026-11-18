@@ -13,8 +13,8 @@
 <link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/">
 <link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/">
 <link rel="alternate" hreflang="x-default" href="https://truckerpayprotector.com/">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B080D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <meta property="og:site_name" content="Trucker Pay Protector">
 <meta property="og:locale" content="es_US">
 <meta property="og:locale:alternate" content="en_US">
@@ -41,8 +41,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+Gurmukhi:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=2026-11-11">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=2026-11-18">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://truckerpayprotector.com/#company", "name": "Trucker Pay Protector LLC", "url": "https://truckerpayprotector.com/", "logo": "https://truckerpayprotector.com/icon-512.png", "email": "support@truckerpayprotector.com"}, {"@type": "WebSite", "@id": "https://truckerpayprotector.com/#site", "name": "Trucker Pay Protector", "url": "https://truckerpayprotector.com/", "inLanguage": ["en", "es", "pa", "ru", "ar"], "publisher": {"@id": "https://truckerpayprotector.com/#company"}}, {"@type": "MobileApplication", "name": "Trucker Pay Protector", "operatingSystem": "Android", "applicationCategory": "BusinessApplication", "description": "Una app para Android que revisa cada talón de pago o liquidación con sus propios papeles de pago. Para choferes de compañía y dueños-operadores. Hecha por un chofer de ruta larga.", "inLanguage": "es", "url": "https://truckerpayprotector.com/es/", "installUrl": "https://play.google.com/store/apps/details?id=com.truckerpayprotector.app", "publisher": {"@id": "https://truckerpayprotector.com/#company"}}]}</script>
 </head>
 <body>
@@ -51,10 +51,7 @@
   <div class="in">
     <nav aria-label="Main">
       <a class="brand" href="/es/" aria-label="Trucker Pay Protector">
-        <picture>
-          <source srcset="/assets/lockup-night.svg" media="(prefers-color-scheme: dark)">
-          <img src="/assets/lockup-day.svg" alt="Trucker Pay Protector" width="98" height="32">
-        </picture>
+        <img src="/assets/lockup-night.svg" alt="Trucker Pay Protector" width="110" height="36">
       </a>
       <div class="links">
         <a href="#how">Cómo funciona</a><a href="#pricing">Precios</a><a href="#faq">Preguntas</a><a href="/about/">Nuestra historia</a>
@@ -77,100 +74,111 @@
             <span><b>iPhone</b><small>Próximamente</small></span>
           </div>
         </div>
-        <p class="trial">30 días de prueba gratis. Cancele cuando quiera en Google Play.</p>
+        <p class="trial">30 días de prueba gratis. Cancele cuando quiera en su tienda de apps.</p>
       </div>
-      <figure class="phone" aria-label="Revisión del cheque">
-        <div class="screen">
-          <div class="shead"><small>SEMANA DEL 26 DE OCT</small><b>Revisión del cheque</b></div>
-          <div class="card"><div class="sumtop"><span>Líneas que cuadran</span><span class="big" dir="ltr">11/12</span></div></div>
-          <div class="card look"><b>1 línea para revisar</b><div>Espera, martes, parada 2</div><div class="row2"><span>Su plan: <bdi>$45.00</bdi></span><span>Talón: <bdi>$0.00</bdi></span></div></div>
-          <div class="card">
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Millas 2,140</span><bdi>$1,326.80</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Pago por parada 9</span><bdi>$225.00</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Descanso fuera 1</span><bdi>$80.00</bdi></div>
-            <div class="okline"><span><span class="tick" aria-hidden="true">✓</span>Seguro</span><bdi>−$42.10</bdi></div>
-          </div>
-        </div>
-        <figcaption>Números de ejemplo para mostrar cómo funciona.</figcaption>
+      <figure class="shot heroshot">
+        <div class="bezel"><img src="/assets/app/check-night.webp" alt="Pantalla de la app, en inglés: revisión del cheque. Una línea no cuadra: pago por hora y demora, $49.88." width="540" height="1145" fetchpriority="high"></div>
+        <figcaption>Números de ejemplo para mostrar cómo funciona. <span class="tag">Con suscripción</span></figcaption>
       </figure>
     </div>
   </div>
 </header>
 
 <main id="main">
-<section id="how"><div class="in">
+
+<section id="how" class="fade"><div class="in">
   <p class="kicker">Cómo funciona</p><h2>Cuatro pasos fáciles.</h2>
   <ol class="steps">
-    <li class="tile"><span class="n">1</span><h3>Agregue sus papeles</h3><p>Muéstrele a la app sus papeles de pago y un talón de pago reciente.</p></li>
-    <li class="tile"><span class="n">2</span><h3>Diga sí a su plan</h3><p>La app escribe sus reglas de pago. Usted revisa cada una.</p></li>
-    <li class="tile"><span class="n">3</span><h3>Anote su día</h3><p>Toque una vez por cada parada, espera o evento.</p></li>
-    <li class="tile"><span class="n">4</span><h3>Revise su pago</h3><p>La app revisa cada línea. Le muestra cualquier línea que no cuadre, y por qué.</p></li>
+    <li><span class="n" aria-hidden="true">1</span><h3>Agregue sus papeles</h3><p>Muéstrele a la app sus papeles de pago y un talón de pago reciente.</p></li>
+    <li><span class="n" aria-hidden="true">2</span><h3>Diga sí a su plan</h3><p>La app escribe sus reglas de pago. Usted revisa cada una.</p></li>
+    <li><span class="n" aria-hidden="true">3</span><h3>Anote su día</h3><p>Toque una vez por cada parada, espera o evento.</p></li>
+    <li><span class="n" aria-hidden="true">4</span><h3>Revise su pago</h3><p>La app revisa cada línea. Le muestra cualquier línea que no cuadre, y por qué.</p></li>
   </ol>
 </div></section>
 
 <section class="alt"><div class="in">
-  <p class="kicker">Qué revisa</p><h2>Las líneas pequeñas suman.</h2>
-  <ul class="chips"><li>Millas y pago por milla</li><li>Pago por parada y actividad</li><li>Tiempo de espera y demora</li><li>Por hora y horas extra</li><li>Porcentaje de la carga</li><li>Descanso fuera y avería</li><li>Descuentos y depósito</li><li>Combustible y adelantos</li></ul>
-  <div class="three">
-    <div class="tile"><h3>Choferes de compañía</h3><p>Pagados por milla, por hora o por parada.</p></div>
-    <div class="tile"><h3>Dueños-operadores arrendados</h3><p>Su liquidación revisada con su contrato.</p></div>
-    <div class="tile"><h3>Con su propia autoridad</h3><p>Cada hoja de tarifa revisada con lo que le pagaron.</p></div>
+  <p class="kicker">Dentro de la app</p><h2>La app real. Números de ejemplo.</h2>
+  <div class="shots">
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/today-night.webp" alt="Pantalla de la app, en inglés: el día de hoy, con un botón grande para salir de la parada y el pago del día hasta ahora." width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>Anote su día con un toque.</b><span>Cada parada, espera y carga, con su hora al momento.</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/why-night.webp" alt="Pantalla de la app, en inglés: &quot;¿Por qué?&quot;. Muestra la cuenta de una línea de pago y las palabras del plan de pago." width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>Toque &quot;¿Por qué?&quot; en una línea.</b><span>Vea la cuenta, y la línea en sus papeles cuando los agregue.</span><span class="tag">Con suscripción</span></figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="bezel"><img src="/assets/app/note-night.webp" alt="Pantalla de la app, en inglés: una nota para nómina, lista para enviar." width="540" height="1145" loading="lazy"></div>
+      <figcaption><b>Una nota cortés, lista para enviar.</b><span>Usted la lee. Usted la envía.</span><span class="tag">Con suscripción</span></figcaption>
+    </figure>
   </div>
 </div></section>
 
-<section><div class="in split">
-  <div><p class="kicker">Mejora con el tiempo</p><h2>Entre más la use, más le muestra.</h2><p class="sub">Cada semana que anota se suma a su historial. Puede ver cualquier semana pasada y ver cómo se suma su pago durante el año.</p></div>
-  <ol class="stack">
-    <li class="tile"><h3>Semana 1</h3><p>Aprende sus reglas de pago con sus papeles.</p></li>
-    <li class="tile"><h3>Semana 2</h3><p>Le muestra cómo se compara esta semana con la semana anterior.</p></li>
-    <li class="tile"><h3>Cada día de pago</h3><p>Agregue su cheque. La app lo revisa línea por línea con su propio registro.</p></li>
-  </ol>
+<section><div class="in">
+  <p class="kicker">Qué revisa</p><h2>Las líneas pequeñas suman.</h2>
+  <ul class="chips"><li>Millas y pago por milla</li><li>Pago por parada y actividad</li><li>Tiempo de espera y demora</li><li>Por hora y horas extra</li><li>Porcentaje de la carga</li><li>Descanso fuera y avería</li><li>Descuentos y depósito</li><li>Combustible y adelantos</li></ul>
+  <div class="three">
+    <div><h3>Choferes de compañía</h3><p>Pagados por milla, por hora o por parada.</p></div>
+    <div><h3>Dueños-operadores arrendados</h3><p>Su liquidación revisada con su contrato.</p></div>
+    <div><h3>Con su propia autoridad</h3><p>Cada hoja de tarifa revisada con lo que le pagaron.</p></div>
+  </div>
 </div></section>
 
 <section class="alt"><div class="in split">
-  <div><p class="kicker">Su cuenta en la web</p><h2>Use una pantalla grande en casa.</h2><p class="sub">Entre en una computadora con la misma cuenta. Vea todas sus semanas. Haga un reporte que puede enviar. Imprima un resumen de fin de año.</p>
-    <a class="btn" href="https://account.truckerpayprotector.com/">Entrar a su cuenta</a></div>
-  <div class="web" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div>
-    <table><tr><th>Semana</th><th>Líneas</th><th class="n">Talón</th><th class="n">Plan</th></tr>
-    <tr><td>10/26</td><td>1 para revisar</td><td class="n">$2,184.60</td><td class="n">$2,229.60</td></tr>
-    <tr><td>10/19</td><td>Todo cuadra</td><td class="n">$2,041.15</td><td class="n">$2,041.15</td></tr>
-    <tr><td>10/12</td><td>Todo cuadra</td><td class="n">$1,977.40</td><td class="n">$1,977.40</td></tr>
-    <tr><td>10/5</td><td>Todo cuadra</td><td class="n">$2,310.95</td><td class="n">$2,310.95</td></tr></table></div>
+  <div><p class="kicker">Mejora con el tiempo</p><h2>Entre más la use, más le muestra.</h2><p class="sub">Cada semana que anota se suma a su historial. Puede ver cualquier semana pasada y ver cómo se suma su pago durante el año.</p></div>
+  <ol class="weeks">
+    <li><h3>Semana 1</h3><p>Aprende sus reglas de pago con sus papeles.</p></li>
+    <li><h3>Semana 2</h3><p>Le muestra cómo se compara esta semana con la semana anterior.</p></li>
+    <li><h3>Cada día de pago</h3><p>Agregue su cheque. La app lo revisa línea por línea con su propio registro.</p></li>
+  </ol>
 </div></section>
 
 <section><div class="in split">
+  <div><p class="kicker">Su cuenta en la web</p><h2>Use una pantalla grande en casa.</h2><p class="sub">Entre en una computadora con la misma cuenta. Vea todas sus semanas. Haga un reporte que puede enviar. Imprima un resumen de fin de año.</p>
+    <a class="btn" href="https://account.truckerpayprotector.com/">Entrar a su cuenta</a></div>
+  <div class="web"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="webin"><p><span class="tag">Con suscripción</span></p>
+    <table aria-hidden="true"><tr><th>Semana</th><th>Líneas</th><th class="n">Talón</th><th class="n">Plan</th></tr>
+    <tr><td>10/26</td><td class="look">1 para revisar</td><td class="n">$2,184.60</td><td class="n">$2,229.60</td></tr>
+    <tr><td>10/19</td><td class="ok">Todo cuadra</td><td class="n">$2,041.15</td><td class="n">$2,041.15</td></tr>
+    <tr><td>10/12</td><td class="ok">Todo cuadra</td><td class="n">$1,977.40</td><td class="n">$1,977.40</td></tr>
+    <tr><td>10/5</td><td class="ok">Todo cuadra</td><td class="n">$2,310.95</td><td class="n">$2,310.95</td></tr></table></div></div>
+</div></section>
+
+<section class="alt"><div class="in split">
   <div><p class="kicker">Su pago es suyo</p><h2>Su pago es privado.</h2>
     <ul class="promise"><li>Sin anuncios. Nunca vendemos su información.</li><li>Nunca contactamos a su empleador ni a su transportista.</li><li>Borre su cuenta cuando quiera.</li><li>Úsela en English, Español, ਪੰਜਾਬੀ, Русский o العربية.</li></ul></div>
   <div class="tile"><h3>No es consejo legal ni de nómina</h3><p>La app le muestra dónde sus papeles y su talón de pago no cuadran. Lo que haga después lo decide usted.</p></div>
 </div></section>
 
-<section id="pricing" class="alt"><div class="in">
-  <p class="kicker">Precios</p><h2>Escoja el plan según cómo maneja.</h2>
+<section id="pricing"><div class="in">
+  <p class="kicker">Precios al lanzamiento</p><h2>Escoja el plan según cómo maneja.</h2>
   <div class="prices">
-    <div class="tile price"><h3>Chofer de compañía</h3><p>Un plan de pago, un camión.</p><div class="amt"><bdi>$9.99</bdi> <small>/ mes</small></div><p>o $79.99 al año</p><p class="found"><span class="badge">Precio de fundador</span> ¿Está en nuestra lista de espera? Pague $6.99 al mes o $55.99 al año.</p></div>
-    <div class="tile price"><h3>Dueño-operador</h3><p>Arrendado o con su propia autoridad.</p><div class="amt"><bdi>$19.99</bdi> <small>/ mes</small></div><p>o $159.99 al año</p><p class="found"><span class="badge">Precio de fundador</span> ¿Está en nuestra lista de espera? Pague $13.99 al mes o $111.99 al año.</p></div>
+    <div class="tile price"><h3>Chofer de compañía</h3><p>Un plan de pago, un camión.</p><div class="amt"><bdi>$9.99</bdi> <small>/ mes</small></div><p>o $79.99 al año</p><p class="found"><span class="tag">Precio de fundador</span> ¿Está en nuestra lista de espera? Pague $6.99 al mes o $55.99 al año.</p></div>
+    <div class="tile price"><h3>Dueño-operador</h3><p>Arrendado o con su propia autoridad.</p><div class="amt"><bdi>$19.99</bdi> <small>/ mes</small></div><p>o $159.99 al año</p><p class="found"><span class="tag">Precio de fundador</span> ¿Está en nuestra lista de espera? Pague $13.99 al mes o $111.99 al año.</p></div>
   </div>
-  <p class="note">30 días de prueba gratis en los dos. Para tener el precio de fundador, empiece dentro de los 60 días después del lanzamiento. Empezar su prueba gratis cuenta como empezar. Usted mantiene el precio mientras siga suscrito sin pausa. Los precios son en dólares de EE. UU. y se pagan por Google Play.</p>
+  <p class="note">30 días de prueba gratis en los dos. Para tener el precio de fundador, empiece dentro de los 60 días después del lanzamiento. Empezar su prueba gratis cuenta como empezar. Su precio de fundador se mantiene mientras su suscripción siga activa. Si cancela y su suscripción se vence, al volver paga el precio normal. Los precios son en dólares de EE. UU. y se pagan por su tienda de apps.</p>
 </div></section>
 
-<section id="faq"><div class="in">
+<section id="faq" class="alt"><div class="in">
   <p class="kicker">Preguntas</p><h2>Bueno saber</h2>
   <div class="faq"><details><summary>¿Esto es consejo legal, de impuestos o de nómina?</summary><p>No. La app le muestra lo que dicen sus papeles y lo que dice su talón de pago. Si algo se ve muy mal, hable con su oficina de nómina, la oficina de trabajo de su estado o un abogado.</p></details><details><summary>¿Me promete que voy a recibir dinero?</summary><p>No. Le muestra qué líneas no cuadran, y de dónde salió cada número. No presenta nada ni llama a nadie por usted.</p></details><details><summary>¿Mi empleador o transportista va a saber que la uso?</summary><p>No por nosotros. Nunca contactamos a su empleador, a su transportista ni a su compañía de nómina. Solo compartimos lo que usted decida mandar.</p></details><details><summary>¿Hay una app para iPhone?</summary><p>Todavía no. Por ahora la app es para teléfonos Android. La app para iPhone llegará pronto.</p></details><details><summary>¿Para quién es?</summary><p>Para choferes de compañía y dueños-operadores, arrendados o con su propia autoridad. La app le pregunta cuál es usted cuando la configura.</p></details><details><summary>¿Venden mi información o la usan para anuncios?</summary><p>No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href="/privacy/">Política de privacidad</a> (en inglés).</p></details><details><summary>¿Cómo borro mi cuenta?</summary><p>Puede borrarla en la app. También puede usar nuestra <a href="/delete-account/">página para borrar la cuenta</a> (en inglés).</p></details><details><summary>¿Cómo consigo ayuda?</summary><p>Escríbanos a <a href="mailto:support@truckerpayprotector.com">support@truckerpayprotector.com</a>.</p></details></div>
 </div></section>
 
-<section class="alt cta"><div class="in">
+<section class="cta"><div class="in">
   <h2>Revise su próximo cheque.</h2>
   <div class="stores"><a class="play" href="https://play.google.com/store/apps/details?id=com.truckerpayprotector.app"><svg aria-hidden="true" width="26" height="28" viewBox="0 0 26 28"><path d="M1 1l14 13L1 27z" fill="#34A853"/><path d="M1 1l18 10-4 3z" fill="#4285F4"/><path d="M1 27l18-10-4-3z" fill="#EA4335"/><path d="M19 11l5 3-5 3-4-3z" fill="#FBBC04"/></svg><span><small>DISPONIBLE EN</small> <b lang="en" dir="ltr">Google Play</b></span></a></div>
 </div></section>
 </main>
 
 <footer><div class="in">
+  <img class="footlogo" src="/assets/lockup-night.svg" alt="" width="92" height="30" loading="lazy">
   <p>Trucker Pay Protector revisa su pago con sus propios papeles. No es consejo legal, de impuestos ni de nómina. Los registros de su empleador o de su agente son los oficiales.</p>
   <p>Las páginas legales están en inglés; el texto en inglés es el que vale. Los Términos incluyen un acuerdo de arbitraje.</p>
   <p class="row"><a href="/about/">Nuestra historia</a><a href="/privacy/">Política de privacidad</a><a href="/terms/">Términos de servicio</a><a href="/delete-account/">Borrar su cuenta</a><a href="mailto:support@truckerpayprotector.com">Ayuda</a></p>
   <p class="tm">Google Play y el logo de Google Play son marcas de Google LLC. iPhone es una marca de Apple Inc.</p>
   <p class="tm">© 2026 Trucker Pay Protector LLC</p>
 </div></footer>
-<script src="/assets/site.js?v=2026-11-11" defer></script>
+<script src="/assets/site.js?v=2026-11-18" defer></script>
 </body>
 </html>
