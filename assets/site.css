@@ -182,9 +182,11 @@ footer .row{display:flex;gap:6px 22px;flex-wrap:wrap}
 footer .row a{display:inline-block;padding-block:4px}
 footer .tm{font-size:13px}
 
+@media (max-width:900px){
+  .links{display:none}
+}
 @media (max-width:760px){
   .in{padding-inline:16px}
-  .links{display:none}
   nav{padding-block:16px;gap:10px}
   .brand img{height:32px}
   .lang summary{padding-inline:12px}
