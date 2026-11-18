@@ -39,6 +39,7 @@ def video_section(code, w, e):
         f'poster="/assets/video/use-case-{code}.jpg" aria-labelledby="video-h">'
         f'<source src="/assets/video/use-case-{code}.mp4" type="video/mp4"></video></div>\n'
         f'  <p class="vnote">{e(w["video_note"])}</p>\n'
+        f'  <p class="vnote"><span class="tag">{e(w["paid_tag"])}</span></p>\n'
         '</div></section>\n'
     )
 
