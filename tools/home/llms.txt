@@ -1,0 +1,37 @@
+# Trucker Pay Protector
+
+> An Android app that checks each paystub or settlement against the driver's own pay papers, line by line. For company truck drivers and owner-operators (leased or with their own authority). Built by a working long-haul truck driver.
+
+## What it does
+
+- The driver adds their own pay papers one time (pay sheet, lease or rate confirmations). AI reads the papers and writes down the pay rules, and the driver checks each one.
+- The driver taps once for each stop, load, wait or event. Entries save on the phone first and back up to the driver's account.
+- When a paystub or settlement comes, the app checks each line against the driver's plan and log, and shows the lines that do not match and why, and which lines it could not check.
+- It checks: miles and rate per mile, stop and activity pay, detention and delay time, hourly pay and overtime, percent of load, layover and breakdown pay, deductions and escrow, fuel and advances.
+- With a paid plan, "Why?" on a pay line shows the math, what was logged, and the page of the driver's own papers the rule comes from.
+- If a line does not match, it can write a polite note to payroll. The driver reads it and sends it themselves. The app never sends anything on its own.
+- App languages: {{app_languages}}.
+
+## What it is not
+
+- Not legal, tax or payroll advice. The employer's or broker's records are the official ones.
+- It does not promise money back, file anything, or contact an employer or carrier.
+- It has no built-in pay rates or company plans. Each driver uses their own papers.
+
+## Price
+
+- Free, with or without a subscription: one-tap logging, today's pay, this week's pay, your last pay period's total, backup, and a copy of your data.
+- Paid plans add paystub and settlement checks, "Why?" on pay lines, the plan built from papers, the note to payroll, and an AI helper. The escrow tracker is in the owner-operator plan. Company driver plan and owner-operator plan, 30-day free trial, paid through Google Play. Current prices: https://truckerpayprotector.com/#pricing
+
+## Links
+
+- Home: https://truckerpayprotector.com/
+- Google Play: https://play.google.com/store/apps/details?id=com.truckerpayprotector.app
+- Our story: https://truckerpayprotector.com/about/
+- Privacy: https://truckerpayprotector.com/privacy/
+- Guide: How to check your trucking paystub, line by line: https://truckerpayprotector.com/guides/check-your-paystub/
+- Guide: What detention pay is, and how to check it on your stub: https://truckerpayprotector.com/guides/detention-pay/
+- Guide: How to read a settlement as a leased owner-operator: https://truckerpayprotector.com/guides/read-your-settlement/
+- Guide: What escrow is, and how to track it: https://truckerpayprotector.com/guides/escrow/
+- Guide: Paid by the mile: how to check your miles and rate: https://truckerpayprotector.com/guides/mileage-pay/
+- Help: support@truckerpayprotector.com
