@@ -7,6 +7,8 @@ Writes index.html (English) and es/, pa/, ru/, ar/ index.html. Change words in t
 The use case video: the "See it work" part is left out of a language's page until that language has its own
 video file, assets/video/use-case-<lang>.mp4, and its still picture, assets/video/use-case-<lang>.jpg. The words
 are burned into the video, so each language needs its own file. No file, no video part, no empty box.
+The video starts muted; the player's own sound button turns the sound on. When the final video exists, set the
+length in each language's "video_note" line to the real length before adding the file.
 """
 import html, json, pathlib, re
 
