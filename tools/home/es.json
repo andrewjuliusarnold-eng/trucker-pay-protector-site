@@ -88,6 +88,7 @@
   "priv_2": "Nunca contactamos a su empleador ni a su transportista.",
   "priv_3": "Borre su cuenta cuando quiera.",
   "priv_4": "Úsela en English, Español, ਪੰਜਾਬੀ, Русский o العربية.",
+  "priv_4_six": "Úsela en English, Español, Français, ਪੰਜਾਬੀ, Русский o العربية.",
   "advice_h": "No es consejo legal ni de nómina",
   "advice_p": "La app le muestra dónde sus papeles y su talón de pago no cuadran. Lo que haga después lo decide usted.",
   "price_kicker": "Precios al lanzamiento",
@@ -110,7 +111,7 @@
   "faq": [
     [
       "¿Esto es consejo legal, de impuestos o de nómina?",
-      "No. La app le muestra lo que dicen sus papeles y lo que dice su talón de pago. Si algo se ve muy mal, hable con su oficina de nómina, la oficina de trabajo de su estado o un abogado."
+      "No. La app le muestra lo que dicen sus papeles y lo que dice su talón de pago. Si algo se ve muy mal, hable con su oficina de nómina, la oficina de trabajo del lugar donde trabaja o un abogado."
     ],
     [
       "¿Me promete que voy a recibir dinero?",
@@ -130,7 +131,7 @@
     ],
     [
       "¿Venden mi información o la usan para anuncios?",
-      "No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href=\"/privacy/\">Política de privacidad</a> (en inglés)."
+      "No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href=\"/es/privacy/\">Política de privacidad</a>."
     ],
     [
       "¿Cómo borro mi cuenta?",
@@ -148,7 +149,7 @@
   "foot_terms": "Términos de servicio",
   "foot_delete": "Borrar su cuenta",
   "foot_help": "Ayuda",
-  "legal_note": "Las páginas legales están en inglés; el texto en inglés es el que vale. Los Términos incluyen un acuerdo de arbitraje.",
+  "legal_note": "Las páginas legales se ofrecen en español y en inglés. Los Términos incluyen un acuerdo de arbitraje.",
   "tm_line": "Google Play y el logo de Google Play son marcas de Google LLC. iPhone es una marca de Apple Inc.",
   "skip": "Ir a la parte principal"
 }

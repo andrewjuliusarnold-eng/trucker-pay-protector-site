@@ -4,6 +4,7 @@
     <loc>https://truckerpayprotector.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://truckerpayprotector.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://truckerpayprotector.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://truckerpayprotector.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pa" href="https://truckerpayprotector.com/pa/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/"/>
@@ -13,6 +14,17 @@
     <loc>https://truckerpayprotector.com/es/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://truckerpayprotector.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://truckerpayprotector.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://truckerpayprotector.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pa" href="https://truckerpayprotector.com/pa/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truckerpayprotector.com/"/>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://truckerpayprotector.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://truckerpayprotector.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://truckerpayprotector.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pa" href="https://truckerpayprotector.com/pa/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/"/>
@@ -22,6 +34,7 @@
     <loc>https://truckerpayprotector.com/pa/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://truckerpayprotector.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://truckerpayprotector.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://truckerpayprotector.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pa" href="https://truckerpayprotector.com/pa/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/"/>
@@ -31,6 +44,7 @@
     <loc>https://truckerpayprotector.com/ru/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://truckerpayprotector.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://truckerpayprotector.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://truckerpayprotector.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pa" href="https://truckerpayprotector.com/pa/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/"/>
@@ -40,6 +54,7 @@
     <loc>https://truckerpayprotector.com/ar/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://truckerpayprotector.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://truckerpayprotector.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://truckerpayprotector.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pa" href="https://truckerpayprotector.com/pa/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://truckerpayprotector.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://truckerpayprotector.com/ar/"/>
@@ -55,9 +70,39 @@
     <loc>https://truckerpayprotector.com/terms/</loc>
   </url>
   <url>
+    <loc>https://truckerpayprotector.com/fr/privacy/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/fr/terms/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/es/privacy/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/es/terms/</loc>
+  </url>
+  <url>
     <loc>https://truckerpayprotector.com/delete-account/</loc>
   </url>
   <url>
     <loc>https://truckerpayprotector.com/beta-agreement/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/guides/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/guides/check-your-paystub/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/guides/detention-pay/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/guides/escrow/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/guides/mileage-pay/</loc>
+  </url>
+  <url>
+    <loc>https://truckerpayprotector.com/guides/read-your-settlement/</loc>
   </url>
 </urlset>

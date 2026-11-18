@@ -88,6 +88,7 @@
   "priv_2": "We never contact your employer or carrier.",
   "priv_3": "Delete your account any time.",
   "priv_4": "Use it in English, Español, ਪੰਜਾਬੀ, Русский or العربية.",
+  "priv_4_six": "Use it in English, Español, Français, ਪੰਜਾਬੀ, Русский or العربية.",
   "advice_h": "Not legal or payroll advice",
   "advice_p": "The app shows you where your papers and your paystub do not match. What you do next is up to you.",
   "price_kicker": "Prices at launch",
@@ -110,7 +111,7 @@
   "faq": [
     [
       "Is this legal, tax or payroll advice?",
-      "No. The app shows what your papers say and what your paystub says. If something looks very wrong, talk to your payroll office, your state labor office or a lawyer."
+      "No. The app shows what your papers say and what your paystub says. If something looks very wrong, talk to your payroll office, the labor office where you work, or a lawyer."
     ],
     [
       "Does it promise I get money back?",
@@ -144,6 +145,7 @@
   "cta_h": "Check your next paycheck.",
   "foot_line": "Trucker Pay Protector checks your pay against your own papers. It is not legal, tax or payroll advice. Your employer's or broker's records are the official ones.",
   "foot_story": "Our story",
+  "foot_guides": "Pay guides",
   "foot_privacy": "Privacy Policy",
   "foot_terms": "Terms of Service",
   "foot_delete": "Delete your account",
