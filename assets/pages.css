@@ -1,30 +1,25 @@
 /* Trucker Pay Protector inner pages: Our story, Privacy, Terms, Delete account, Beta agreement, Email confirmed,
    Page not found and the /account forward. One file so they all match the home page (assets/site.css): same colors,
-   same type, light and dark follow the phone's setting. Built 2026-11-11. */
+   same type. "Night Shift" look, 2026-11-18: black like the app at night, one look for every phone (the pages no
+   longer follow the phone's light or dark setting). */
 :root{
-  --bg:#FFFFFF; --bg2:#F7F5F8; --surface:#F7F5F8; --ink:#19151D; --muted:#4B4553; --line:#E4E0E8;
-  --accent:#6E2A78; --accent-ink:#FFFFFF; --accent-fill:#F3E6F5; --btn:#6E2A78; --btn-ink:#FFFFFF;
-  --flag:#A3321F; --flag-fill:#FBE6E1;
+  --bg:#000000; --bg2:#0B080D; --surface:#151018; --ink:#EEEAF1; --white:#FFFFFF; --muted:#BDB5C4;
+  --line:#2F2636; --line2:#3A2E42;
+  --accent:#D7A8DE; --accent-ink:#140F17; --accent-fill:#3F1E46; --btn:#92459B; --btn-ink:#FFFFFF;
+  --flag:#E8836F; --flag-fill:#3C1C16;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --body:Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  color-scheme:light;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    color-scheme:dark;
-    --bg:#0B080D; --bg2:#151018; --surface:#1B151F; --ink:#EEEAF1; --muted:#BDB5C4; --line:#2F2636;
-    --accent:#D7A8DE; --accent-ink:#140F17; --accent-fill:#3F1E46; --btn:#C68BCF; --btn-ink:#140F17;
-    --flag:#E8836F; --flag-fill:#3C1C16;
-  }
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-inline:16px;padding-block:0 48px;font-size:16px;line-height:1.6;overflow-wrap:break-word}
+body{background:var(--bg) linear-gradient(180deg,#1F0B27 0,#0E0512 120px,#000 300px) no-repeat;color:var(--ink);font-family:var(--body);padding-inline:16px;padding-block:0 48px;font-size:16px;line-height:1.6;overflow-wrap:break-word}
 .wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
-h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1;color:var(--white)}
 p,ul,ol{margin:0}
 a{color:var(--accent)}
+a:hover{color:var(--white)}
 img{max-width:100%}
 strong{font-weight:700}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
@@ -35,11 +30,12 @@ strong{font-weight:700}
 /* top bar: same logo size and link style as the home page */
 nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:4px 16px;flex-wrap:wrap;padding-block:12px 0}
 .brand{display:flex;align-items:center}
-.brand img{height:32px;width:auto;display:block}
-.navlinks{display:flex;gap:18px;font-size:15.5px}
+.brand img{height:36px;width:auto;display:block}
+.navlinks{display:flex;align-items:center;gap:18px;font-size:15.5px;font-weight:500}
 .navlinks a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:36px}
-.navlinks a:hover{color:var(--ink)}
-.navlinks a.login{font-weight:700;color:var(--ink)}
+.navlinks a:hover{color:var(--white)}
+.navlinks a.login{font-weight:600;color:var(--white);min-height:44px;padding:0 18px;border-radius:999px;background:#1B151F;border:1px solid var(--line2)}
+.navlinks a.login:hover{border-color:var(--accent)}
 
 header.page{display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line);padding-bottom:24px}
 h1{font-size:clamp(34px,6vw,48px);font-weight:800}
@@ -64,7 +60,7 @@ h2{font-size:22px;font-weight:700;margin-top:4px}
 .addr{font-weight:600}
 .emailbox input[type=email]{font:inherit;font-size:16px;padding:10px 12px;min-height:48px;border:1px solid var(--muted);border-radius:6px;background:var(--bg);color:var(--ink)}
 .emailbox button{font:inherit;font-weight:700;font-size:16px;padding:10px 18px;min-height:48px;border:none;border-radius:999px;background:var(--btn);color:var(--btn-ink);cursor:pointer;align-self:flex-start}
-.emailbox button:hover{filter:brightness(1.08)}
+.emailbox button:hover{filter:brightness(1.12)}
 .emailbox button:disabled{opacity:.6;cursor:default}
 
 /* our story */
@@ -89,7 +85,7 @@ body.center{min-height:100%;display:flex;flex-direction:column;padding-block:0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:15px;color:var(--muted)}
 .card a{display:inline-block;padding-block:2px}
 .btn{display:inline-flex;align-items:center;font-weight:700;font-size:16.5px;padding:13px 22px;border-radius:999px;background:var(--btn);color:var(--btn-ink);text-decoration:none;min-height:48px}
-.btn:hover{filter:brightness(1.08)}
+.btn:hover{color:var(--btn-ink);filter:brightness(1.12)}
 .center footer{text-align:center}
 .center footer .row{justify-content:center}
 
@@ -97,4 +93,5 @@ body.center{min-height:100%;display:flex;flex-direction:column;padding-block:0}
 footer{border-top:1px solid var(--line);padding-top:24px;padding-bottom:24px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:var(--muted)}
 footer .row{display:flex;gap:4px 20px;flex-wrap:wrap}
 footer a{color:var(--muted);display:inline-block;padding-block:3px}
+footer a:hover{color:var(--white)}
 footer .tm{font-size:13px}
