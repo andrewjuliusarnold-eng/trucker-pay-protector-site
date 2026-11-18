@@ -25,7 +25,10 @@ LANGS = ["en", "es", "fr", "pa", "ru", "ar"]
 APP_LANGS = ["en", "es", "pa", "ru", "ar"]
 LANG_NAMES_EN = {"en": "English", "es": "Spanish", "fr": "French", "pa": "Punjabi", "ru": "Russian", "ar": "Arabic"}
 # Pages that are not built here but belong in the site map, in this order.
-OTHER_PAGES = ["/about/", "/privacy/", "/terms/", "/delete-account/", "/beta-agreement/"]
+# Languages that have their own privacy and terms pages (/fr/privacy/ and so on). The rest link to the English ones.
+LEGAL_LANGS = ["fr", "es"]
+OTHER_PAGES = (["/about/", "/privacy/", "/terms/"] + [f"/{c}/{p}/" for c in LEGAL_LANGS for p in ("privacy", "terms")]
+               + ["/delete-account/", "/beta-agreement/"])
 PLAY_URL = "https://play.google.com/store/apps/details?id=com.truckerpayprotector.app"
 ACCOUNT_URL = "https://account.truckerpayprotector.com/"
 SITE = "https://truckerpayprotector.com"
@@ -89,6 +92,8 @@ def build(code, all_words):
     rep["path"] = path_for(code)
     rep["home"] = path_for(code)
     rep["account_url"] = ACCOUNT_URL
+    legal = f"/{code}" if code in LEGAL_LANGS else ""
+    rep["privacy_url"], rep["terms_url"] = f"{legal}/privacy/", f"{legal}/terms/"
     rep["hreflang"] = "\n".join(
         f'<link rel="alternate" hreflang="{c}" href="https://truckerpayprotector.com{path_for(c)}">' for c in LANGS
     ) + '\n<link rel="alternate" hreflang="x-default" href="https://truckerpayprotector.com/">'

@@ -131,7 +131,7 @@
     ],
     [
       "¿Venden mi información o la usan para anuncios?",
-      "No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href=\"/privacy/\">Política de privacidad</a> (en inglés)."
+      "No. No vendemos su información, no mostramos anuncios y no usamos su pago para perfiles de anuncios. Lea más en nuestra <a href=\"/es/privacy/\">Política de privacidad</a>."
     ],
     [
       "¿Cómo borro mi cuenta?",
@@ -149,7 +149,7 @@
   "foot_terms": "Términos de servicio",
   "foot_delete": "Borrar su cuenta",
   "foot_help": "Ayuda",
-  "legal_note": "Las páginas legales están en inglés; el texto en inglés es el que vale. Los Términos incluyen un acuerdo de arbitraje.",
+  "legal_note": "Las páginas legales se ofrecen en español y en inglés. Los Términos incluyen un acuerdo de arbitraje.",
   "tm_line": "Google Play y el logo de Google Play son marcas de Google LLC. iPhone es una marca de Apple Inc.",
   "skip": "Ir a la parte principal"
 }

@@ -131,7 +131,7 @@
     ],
     [
       "Mes renseignements sont-ils vendus ou utilisés pour de la publicité ?",
-      "Non. Nous ne vendons pas vos renseignements, nous ne montrons pas de publicité et nous n'utilisons pas votre paye pour faire des profils publicitaires. Lisez-en plus dans notre <a href=\"/privacy/\">Politique de confidentialité</a> (en anglais)."
+      "Non. Nous ne vendons pas vos renseignements, nous ne montrons pas de publicité et nous n'utilisons pas votre paye pour faire des profils publicitaires. Lisez-en plus dans notre <a href=\"/fr/privacy/\">Politique de confidentialité</a>."
     ],
     [
       "Comment supprimer mon compte ?",
@@ -149,7 +149,7 @@
   "foot_terms": "Conditions d'utilisation",
   "foot_delete": "Supprimer votre compte",
   "foot_help": "Aide",
-  "legal_note": "Les pages juridiques sont en anglais pour le moment. La version française s'en vient. Les Conditions comprennent une entente d'arbitrage, qui ne s'applique pas aux consommateurs du Québec et de l'Ontario.",
+  "legal_note": "Les pages juridiques sont offertes en français et en anglais. Les Conditions comprennent une entente d'arbitrage, qui ne s'applique pas aux consommateurs du Québec et de l'Ontario.",
   "tm_line": "Google Play et le logo Google Play sont des marques de commerce de Google LLC. iPhone est une marque de commerce d'Apple Inc.",
   "skip": "Aller à la partie principale"
 }
