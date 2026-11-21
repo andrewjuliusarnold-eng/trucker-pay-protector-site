@@ -140,7 +140,9 @@ h3{font-size:28px;font-weight:700;line-height:1.1}
 .webin{padding:6px 16px 12px}
 .webin>p{padding:10px 8px 2px}
 .web table{width:100%;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums}
-.web td,.web th{padding:11px 8px;border-bottom:1px solid var(--line);text-align:start;overflow-wrap:anywhere}
+.web td,.web th{padding:11px 8px;border-bottom:1px solid var(--line);text-align:start;overflow-wrap:normal}
+/* dates and the Week heading never split in the middle ("10/2" then "6") on a small phone */
+.web td:first-child,.web th:first-child{white-space:nowrap}
 .web tr:last-child td{border-bottom:0}
 .web th{font-size:12.5px;color:var(--muted);font-weight:600}
 .web .n{text-align:end;white-space:nowrap}
@@ -205,5 +207,9 @@ footer .tm{font-size:13px}
   .webin{padding-inline:8px}
   .web table{font-size:13.5px}
   .web td,.web th{padding-inline:5px}
+}
+@media (max-width:374px){
+  .web table{font-size:12.5px}
+  .web td,.web th{padding-inline:3px}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
