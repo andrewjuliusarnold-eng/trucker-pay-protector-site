@@ -24,7 +24,8 @@ function serve() {
   });
 }
 
-// mode: 'allow' (sound allowed), 'block' (sound refused before a tap), 'safari' (refused, with play then pause events)
+// mode: 'allow' (sound allowed), 'block' (sound refused before a tap), 'safari' (refused, with play then pause events),
+// 'slow' (sound allowed, but play() takes 800 ms to load; a pause while loading rejects it with AbortError, as Chrome does)
 function standIn(mode) {
   const st = new WeakMap();
   const get = el => { if (!st.has(el)) st.set(el, { paused: true }); return st.get(el); };
@@ -34,7 +35,7 @@ function standIn(mode) {
   Object.defineProperty(HTMLMediaElement.prototype, 'ended', { configurable: true, get() { return false; } });
   HTMLMediaElement.prototype.play = function () {
     const s = get(this);
-    if (mode !== 'allow' && !this.muted && !tapped) {
+    if ((mode === 'block' || mode === 'safari') && !this.muted && !tapped) {
       if (mode === 'safari') {
         s.paused = false; this.dispatchEvent(new Event('play'));
         s.paused = true; this.dispatchEvent(new Event('pause'));
@@ -42,10 +43,12 @@ function standIn(mode) {
       return Promise.reject(new DOMException('no sound yet', 'NotAllowedError'));
     }
     if (s.paused) { s.paused = false; this.dispatchEvent(new Event('play')); }
+    if (mode === 'slow') return new Promise((ok, no) => { s.pending = no; setTimeout(() => { if (s.pending === no) { s.pending = null; ok(); } }, 800); });
     return Promise.resolve();
   };
   HTMLMediaElement.prototype.pause = function () {
     const s = get(this);
+    if (s.pending) { const no = s.pending; s.pending = null; no(new DOMException('paused while loading', 'AbortError')); }
     if (!s.paused) { s.paused = true; this.dispatchEvent(new Event('pause')); }
   };
 }
@@ -100,6 +103,20 @@ function expect(name, got, want) {
   await toVideo(p); await wait(p); expect('safari-style refusal: still plays muted with the button', await state(p), { playing: true, muted: true, button: true });
   await toTop(p); await wait(p); await toVideo(p); await wait(p);
   expect('safari-style refusal: away and back still plays', await state(p), { playing: true, muted: true, button: true });
+  await p.context().close();
+
+  p = await page('slow');
+  await toVideo(p); await p.waitForTimeout(200);
+  await p.evaluate(() => document.querySelector('.vframe video').pause()); await p.waitForTimeout(1500);
+  expect('slow load: the visitor pauses while it loads, it stays paused', await state(p), { playing: false, button: false });
+  await toTop(p); await wait(p); await toVideo(p); await wait(p);
+  expect('slow load: still paused after scrolling away and back', await state(p), { playing: false });
+  await p.context().close();
+
+  p = await page('slow');
+  await toVideo(p); await p.waitForTimeout(200);
+  await toTop(p); await p.waitForTimeout(1200); await toVideo(p); await p.waitForTimeout(1200);
+  expect('slow load: scrolled away while loading, plays again with sound on return', await state(p), { playing: true, muted: false, button: false });
   await p.context().close();
 
   await browser.close(); server.close();

@@ -37,14 +37,21 @@
     trying = true;
     var p = v.play();
     if (!p || !p.then) { done(); return; }
-    p.then(done, function () {
+    p.then(done, function (e) {
+      // Any other failure (the visitor paused while it was loading, a bad file): leave the video alone.
+      // A pause while it was still fully on screen was the visitor's, so it stays paused.
+      if (!e || e.name !== 'NotAllowedError') { done(); if (inView) stopped = true; return; }
       // No sound allowed yet: play without sound and offer the button.
       if (!inView || stopped) { done(); return; }
       setMuted(true);
       var q = v.play();
       if (!q || !q.then) { done(); return; }
       q.then(function () { done(); if (!userMuted) showBtn(true); },
-             function () { done(); refused = true; setMuted(userMuted); showBtn(false); });
+             function (e2) {
+               done(); showBtn(false);
+               if (e2 && e2.name === 'NotAllowedError') { refused = true; setMuted(userMuted); }
+               else if (inView) stopped = true;
+             });
     });
   }
 
