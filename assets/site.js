@@ -12,7 +12,7 @@
 // Most browsers block sound until the visitor has tapped the page once. When the browser says no,
 // the video plays without sound and a big "Tap for sound" button shows; one tap turns the sound on.
 // It pauses when it scrolls mostly off the screen and goes on again when it is fully back.
-// It never starts again by itself after the visitor pauses it or after it ends.
+// It never starts again by itself after the visitor pauses it or after it ends, and a mute the visitor chose stays on.
 // Visitors who ask their phone or computer for less motion get the plain player: nothing starts by itself.
 (function () {
   var v = document.querySelector('.vframe video');
@@ -23,20 +23,28 @@
   var ours = false;      // the pause in progress is ours, not the visitor's
   var inView = false;
   var refused = false;  // the browser will not start it at all (a phone saving battery): the visitor taps play
+  var userMuted = false; // the visitor muted it with the player's own button: keep it muted
+  var ourVol = 0;        // sound changes the script made that have not reached volumechange yet
+  var trying = false;    // a play() is in progress; some browsers (Safari) fire play then pause when they refuse
 
   function showBtn(on) { if (btn) btn.hidden = !on; }
+  function setMuted(m) { if (v.muted !== m) { ourVol++; v.muted = m; } }
+  function done() { trying = false; }
 
   function start() {
-    if (stopped || refused || !v.paused) return;
-    v.muted = false;
+    if (stopped || refused || trying || !v.paused) return;
+    setMuted(userMuted);
+    trying = true;
     var p = v.play();
-    if (!p || !p.catch) return;
-    p.catch(function () {
+    if (!p || !p.then) { done(); return; }
+    p.then(done, function () {
       // No sound allowed yet: play without sound and offer the button.
-      if (!inView || stopped) return;
-      v.muted = true;
+      if (!inView || stopped) { done(); return; }
+      setMuted(true);
       var q = v.play();
-      if (q && q.then) q.then(function () { showBtn(true); }, function () { refused = true; v.muted = false; showBtn(false); });
+      if (!q || !q.then) { done(); return; }
+      q.then(function () { done(); if (!userMuted) showBtn(true); },
+             function () { done(); refused = true; setMuted(userMuted); showBtn(false); });
     });
   }
 
@@ -64,14 +72,21 @@
 
   v.addEventListener('pause', function () {
     if (ours) { ours = false; return; }
+    if (trying) return;
     if (!v.ended) stopped = true;
   });
   v.addEventListener('ended', function () { stopped = true; showBtn(false); });
   v.addEventListener('play', function () { stopped = false; });
-  v.addEventListener('volumechange', function () { if (!v.muted) showBtn(false); });
+  v.addEventListener('volumechange', function () {
+    if (!v.muted) showBtn(false);
+    if (ourVol > 0) { ourVol--; return; }
+    userMuted = v.muted;
+    if (userMuted) showBtn(false);
+  });
 
   if (btn) btn.addEventListener('click', function () {
-    v.muted = false;
+    userMuted = false;
+    setMuted(false);
     showBtn(false);
     if (v.paused) { stopped = false; v.play(); }
   });
