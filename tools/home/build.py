@@ -13,7 +13,8 @@ app is not in French yet. With "fr" in APP_LANGS every page uses its six languag
 The use case video: the "See it work" part is left out of a language's page until that language has its own
 video file, assets/video/use-case-<lang>.mp4, and its still picture, assets/video/use-case-<lang>.jpg. The words
 are burned into the video, so each language needs its own file. No file, no video part, no empty box.
-The video starts muted; the player's own sound button turns the sound on. When the final video exists, set the
+The video starts by itself with sound once it is fully on the screen (assets/site.js). Where the browser blocks
+sound before the first tap, it plays without sound and a "Tap for sound" button (the "video_sound" words) shows. When the final video exists, set the
 length in each language's "video_note" line to the real length before adding the file.
 """
 import html, json, pathlib, re
@@ -49,9 +50,10 @@ def video_section(code, w, e):
     return (
         '<section class="video" aria-labelledby="video-h"><div class="in">\n'
         f'  <p class="kicker">{e(w["video_kicker"])}</p><h2 id="video-h">{e(w["video_h"])}</h2>\n'
-        f'  <div class="vframe"><video controls playsinline muted preload="none" width="1920" height="1080" '
+        f'  <div class="vframe"><video controls playsinline preload="none" width="1920" height="1080" '
         f'poster="/assets/video/use-case-{code}.jpg" aria-labelledby="video-h">'
-        f'<source src="/assets/video/use-case-{code}.mp4" type="video/mp4"></video></div>\n'
+        f'<source src="/assets/video/use-case-{code}.mp4" type="video/mp4"></video>'
+        f'<button type="button" class="vsound" hidden>{e(w["video_sound"])}</button></div>\n'
         f'  <p class="vnote">{e(w["video_note"])}</p>\n'
         f'  <p class="vnote"><span class="tag">{e(w["paid_tag"])}</span></p>\n'
         '</div></section>\n'
