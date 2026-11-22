@@ -10,7 +10,7 @@
 - It checks: miles and rate per mile, stop and activity pay, detention and delay time, hourly pay and overtime, percent of load, layover and breakdown pay, deductions and escrow, fuel and advances.
 - With a paid plan, "Why?" on a pay line shows the math, what was logged, and the page of the driver's own papers the rule comes from.
 - If a line does not match, it can write a polite note to payroll. The driver reads it and sends it themselves. The app never sends anything on its own.
-- App languages: English, Spanish, Punjabi, Russian, Arabic.
+- App languages: English, Spanish, Punjabi, Russian, Arabic, French.
 
 ## What it is not
 

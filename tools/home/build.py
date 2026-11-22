@@ -23,7 +23,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 HERE = pathlib.Path(__file__).resolve().parent
 LANGS = ["en", "es", "fr", "pa", "ru", "ar"]
 # The languages the app itself offers. See the note at the top before adding "fr".
-APP_LANGS = ["en", "es", "pa", "ru", "ar"]
+APP_LANGS = ["en", "es", "pa", "ru", "ar", "fr"]
 LANG_NAMES_EN = {"en": "English", "es": "Spanish", "fr": "French", "pa": "Punjabi", "ru": "Russian", "ar": "Arabic"}
 # Pages that are not built here but belong in the site map, in this order.
 # Languages that have their own privacy and terms pages (/fr/privacy/ and so on). The rest link to the English ones.
