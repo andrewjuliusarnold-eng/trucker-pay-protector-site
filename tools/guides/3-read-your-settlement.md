@@ -44,7 +44,7 @@ Write down the load, the line, your number and where it came from. Ask the carri
 
 ## The fast way
 
-Trucker Pay Protector is an Android app that checks each settlement against your own lease. It also has an escrow tracker (paid plan). You add your lease one time, and AI reads it. You check each rule. With a paid plan (30-day free trial for new subscribers), the app checks each settlement line it can, and tells you which lines it could not check.
+Trucker Pay Protector is an Android app that checks each settlement against your own lease. You add your lease one time, and AI reads it. You check each rule. With the owner-operator plan (30-day free trial for new subscribers), the app checks each settlement line it can, tells you which lines it could not check, and tracks your escrow.
 
 [Get it on Google Play]
 

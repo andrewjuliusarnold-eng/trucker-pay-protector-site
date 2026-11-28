@@ -21,7 +21,7 @@
 ## Price
 
 - Free, with or without a subscription: one-tap logging, today's pay, this week's pay, your last pay period's total, backup, and a copy of your data.
-- Paid plans add paystub and settlement checks, "Why?" on pay lines, the plan built from papers, the note to payroll, and an AI helper. The escrow tracker is in the owner-operator plan. Company driver plan and owner-operator plan, each with a 30-day free trial for new subscribers, paid through Google Play. Current prices: https://truckerpayprotector.com/#pricing
+- Paid plans add paystub checks, "Why?" on pay lines, the plan built from papers, the note to payroll, and an AI helper. Settlement checks and the escrow tracker are in the owner-operator plan. Company driver plan and owner-operator plan, each with a 30-day free trial for new subscribers, paid through Google Play. Current prices: https://truckerpayprotector.com/#pricing
 
 ## Links
 

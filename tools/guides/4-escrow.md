@@ -40,7 +40,7 @@ Write down each week, your total and the carrier's total. Ask the carrier's sett
 
 ## The fast way
 
-Trucker Pay Protector is an Android app with an escrow tracker (paid plan). It helps you keep the running total of your escrow, week by week.
+Trucker Pay Protector is an Android app with an escrow tracker in the owner-operator plan. It helps you keep the running total of your escrow, week by week.
 
 [Get it on Google Play]
 
