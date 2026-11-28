@@ -29,10 +29,10 @@ strong{font-weight:700}
 
 /* top bar: same logo size and link style as the home page */
 nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:4px 16px;flex-wrap:wrap;padding-block:12px 0}
-.brand{display:flex;align-items:center}
+.brand{display:flex;align-items:center;min-height:44px}
 .brand img{height:36px;width:auto;display:block}
 .navlinks{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:4px 18px;font-size:15.5px;font-weight:500}
-.navlinks a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:36px}
+.navlinks a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;min-width:44px;justify-content:center}
 .navlinks a:hover{color:var(--white)}
 .navlinks a.login{font-weight:600;color:var(--white);min-height:44px;padding:0 18px;border-radius:999px;background:#1B151F;border:1px solid var(--line2)}
 .navlinks a.login:hover{border-color:var(--accent)}
@@ -98,3 +98,5 @@ footer .row{display:flex;gap:4px 20px;flex-wrap:wrap}
 footer a{color:var(--muted);display:inline-block;padding-block:3px}
 footer a:hover{color:var(--white)}
 footer .tm{font-size:13px}
+/* A guide in the guides list is a tap target of its own: 44 tall at least (outside audit OA-011). */
+.doc.guide > ul > li > a:first-child{display:inline-flex;align-items:center;min-height:44px}
