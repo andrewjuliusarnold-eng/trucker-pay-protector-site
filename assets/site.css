@@ -163,8 +163,6 @@ h3{font-size:28px;font-weight:700;line-height:1.1}
 .price .amt{font-family:var(--display);font-size:68px;font-weight:800;margin-top:20px;line-height:.95;color:var(--white)}
 .price .amt small{font-family:var(--body);font-size:17px;color:var(--muted);font-weight:400}
 .price .amt+p{margin-top:6px}
-.price .found{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:15.5px}
-.found .tag{margin-inline-end:4px}
 .note{color:var(--muted);font-size:15px;margin-top:22px;max-width:72ch}
 
 .faq{max-width:860px;margin-top:28px}
