@@ -42,8 +42,16 @@ PLAY_ICON = ('<svg aria-hidden="true" width="26" height="28" viewBox="0 0 26 28"
              '<path d="M19 11l5 3-5 3-4-3z" fill="#FBBC04"/></svg>')
 
 
+# Videos kept off the page for now. The English video (11-28) shows the payroll note ("Ask a fair question. The app
+# drafts the note.") and "Copy for payroll", which are off for launch (the app's PAYROLL_NOTE_ON). It comes back when a
+# new cut without them exists, or when the note is turned on (outside audit OA-002, founder yes 2026-11-28 09:23:20Z).
+VIDEO_HELD = {"en"}
+
+
 def video_section(code, w, e):
-    """The "See it work" part, or nothing when this language has no video file yet."""
+    """The "See it work" part, or nothing when this language has no video file yet or its video is held."""
+    if code in VIDEO_HELD:
+        return ""
     mp4 = ROOT / "assets" / "video" / f"use-case-{code}.mp4"
     poster = ROOT / "assets" / "video" / f"use-case-{code}.jpg"
     if not (mp4.exists() and poster.exists()):
