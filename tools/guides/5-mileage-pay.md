@@ -41,7 +41,7 @@ Check the miles first, then the rate. Write down each trip, the miles and the ra
 
 ## The fast way
 
-Trucker Pay Protector is an Android app that checks the miles line for you. With a paid plan (30-day free trial), it uses the mile rule from your own pay plan and the trips you logged, and shows you the math for each week.
+Trucker Pay Protector is an Android app that checks the miles line for you. With a paid plan (30-day free trial for new subscribers), it uses the mile rule from your own pay plan and the trips you logged, and shows you the math for each week.
 
 [Get it on Google Play]
 

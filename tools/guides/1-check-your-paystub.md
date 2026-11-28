@@ -56,7 +56,7 @@ Sometimes the stub is right and a rule works in a way you did not expect. Asking
 
 ## The fast way
 
-Trucker Pay Protector is an Android app that does this check for you. You add your pay papers one time, and AI reads them. You check each rule. You tap once for each stop, wait or event. With a paid plan (30-day free trial), when your paystub comes, the app checks each line against your plan and your log. It shows the lines that do not match and why, and tells you which lines it could not check.
+Trucker Pay Protector is an Android app that does this check for you. You add your pay papers one time, and AI reads them. You check each rule. You tap once for each stop, wait or event. With a paid plan (30-day free trial for new subscribers), when your paystub comes, the app checks each line against your plan and your log. It shows the lines that do not match and why, and tells you which lines it could not check.
 
 [Get it on Google Play]
 

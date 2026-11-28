@@ -38,7 +38,7 @@ If your number does not match, write down the stop, the times and your math. The
 
 ## The fast way
 
-Trucker Pay Protector is an Android app that does this for you. Tap once when you get there and once when you leave. The app uses the detention rule from your own pay plan. With a paid plan (30-day free trial), when your paystub comes, it checks the detention line and shows you the math.
+Trucker Pay Protector is an Android app that does this for you. Tap once when you get there and once when you leave. The app uses the detention rule from your own pay plan. With a paid plan (30-day free trial for new subscribers), when your paystub comes, it checks the detention line and shows you the math.
 
 [Get it on Google Play]
 
