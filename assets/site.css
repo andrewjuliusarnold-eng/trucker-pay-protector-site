@@ -39,7 +39,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* top: the black sky fades to plum at the bottom, like the sky before sunrise */
 .hero{background:linear-gradient(180deg,#000 0%,#000 46%,#1A0920 82%,#2B1034 100%)}
 nav{display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;padding-block:22px}
-.brand{display:flex;margin-inline-end:auto}
+.brand{display:flex;align-items:center;min-height:44px;margin-inline-end:auto}
 .brand img{height:36px;width:auto;display:block}
 .links{display:flex;flex-wrap:wrap;gap:4px 26px;font-size:15.5px;font-weight:500}
 .links a{color:var(--muted);text-decoration:none;padding-block:10px}
